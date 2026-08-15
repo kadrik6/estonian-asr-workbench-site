@@ -113,16 +113,20 @@ footer.site-foot .wrap { display: flex; justify-content: space-between; flex-wra
 .hero-scope { font-size: 1.05rem; color: var(--text-dim); max-width: 62ch; margin: 4px 0 28px; }
 .hero-scope strong { color: var(--text); }
 
-.barchart { display: flex; flex-direction: column; gap: 10px; margin: 8px 0 32px; }
-.barchart .row { display: grid; grid-template-columns: 210px 1fr 64px; align-items: center; gap: 10px; }
-.barchart .label { font-size: 0.86rem; text-align: right; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.barchart { display: flex; flex-direction: column; gap: 12px; margin: 8px 0 32px; }
+.barchart .row { display: grid; grid-template-columns: 148px 1fr 60px; align-items: center; gap: 10px; }
+.barchart .label {
+  font-size: 0.86rem; text-align: right; color: var(--text-dim); line-height: 1.25;
+  overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
 .barchart .label strong { color: var(--text); }
 .barchart .track { background: var(--surface-sunken); border-radius: 4px; height: 20px; overflow: hidden; }
 .barchart .fill { height: 100%; border-radius: 4px 0 0 4px; }
-.barchart .val { font-variant-numeric: tabular-nums; font-size: 0.84rem; color: var(--text); }
-.chart-caption { font-size: 0.8rem; color: var(--text-faint); margin: -4px 0 26px; }
+.barchart .val { font-variant-numeric: tabular-nums; font-size: 0.84rem; color: var(--text); white-space: nowrap; }
+.chart-caption { font-size: 0.8rem; color: var(--text-faint); margin: -4px 0 14px; }
+.chart-legend { margin: 0 0 18px; }
 @media (max-width: 640px) {
-  .barchart .row { grid-template-columns: 110px 1fr 52px; }
+  .barchart .row { grid-template-columns: 96px 1fr 50px; }
   .barchart .label { font-size: 0.76rem; }
 }
 
