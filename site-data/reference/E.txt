@@ -1,0 +1,13 @@
+Ma arvan, et eesti keelele kohandatud kõnetuvastusmudel võib olla parem kui suurem üldine mitmekeelne mudel sellepärast, et ta on õppinud just eesti keele iseärasusi palju täpsemalt.
+
+Eesti keel on üsna keeruline selles mõttes, et meil on palju käändeid, sõnalõpud muutuvad ja liitsõnad võivad olla väga pikad. Lisaks on meil päris palju tehnilisi sõnu ja inglise keelest tulnud termineid, mida kasutatakse eestikeelses kõnes täiesti loomulikult.
+
+Kui mudel on treenitud väga paljude keelte peale korraga, siis ta peab oma võimekust jagama väga erinevate keelte vahel. Ta võib küll eesti keelt osata, aga mitte nii sügavuti. Eesti keelele kohandatud mudel saab aga rohkem õppida just seda, kuidas eestikeelsed sõnad kõlavad, kuidas sõnavormid muutuvad ja millised sõnad tavaliselt üksteise järel tulevad.
+
+Me nägime seda ka oma katses. Üldine Whisper sai küll kogu salvestusest teksti kätte, aga väga paljud eestikeelsed sõnad olid valesti kuuldud või muutusid täiesti arusaamatuteks sõnadeks. TalTechi mudel tundis samu lauseid palju paremini ära ja tekst oli kohe loetavam.
+
+Seega suurem mudel ei ole alati automaatselt parem. Kui ülesanne on väga konkreetne, näiteks just eestikeelse kõne tuvastamine, siis spetsialiseeritud mudel võib olla väiksem, aga ikkagi täpsem.
+
+Mina mõtleksin sellest nii, et üldine mudel on nagu inimene, kes oskab natuke väga paljusid keeli. Eesti keelele kohandatud mudel on aga nagu inimene, kes tunneb just eesti keelt palju põhjalikumalt.
+
+Ja kõnetuvastuse puhul võib see vahe olla päris suur, sest mudel ei pea ainult keelest aru saama, vaid ta peab kõigepealt helist õiged sõnad ära tundma.

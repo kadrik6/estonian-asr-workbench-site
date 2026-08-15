@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transcript comparison — Estonian ASR Workbench</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="wide">
+<header class="site-head" id="site-header"></header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Transcript comparison</h1>
+    <p>
+      Pick a benchmark set and 2–4 systems to see exactly where their output
+      differs from the reference script. Every highlight below comes from a
+      word-level alignment computed once in Python, using the same scoring
+      code that produced the headline numbers — nothing here is recomputed
+      in the browser.
+    </p>
+  </div>
+
+  <div class="picker-bar">
+    <div>
+      <div class="fg-label" style="font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-faint);font-weight:600;margin-bottom:8px;">Set</div>
+      <div class="set-picker" id="set-picker"></div>
+    </div>
+    <div>
+      <div class="fg-label" style="font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-faint);font-weight:600;margin-bottom:8px;">Systems (choose 2–4)</div>
+      <div class="sys-picker" id="sys-picker"></div>
+      <div class="picker-note" id="picker-note"></div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span class="item"><span class="sw" style="background:color-mix(in srgb, var(--sub) 45%, transparent)"></span>substitution — a different word than expected</span>
+    <span class="item"><span class="sw" style="background:color-mix(in srgb, var(--del) 35%, transparent)"></span>deletion — a word is missing</span>
+    <span class="item"><span class="sw" style="background:color-mix(in srgb, var(--ins) 40%, transparent)"></span>insertion — an extra word that isn't in the reference</span>
+    <span class="item"><span class="sw" style="background:color-mix(in srgb, var(--bound) 45%, transparent)"></span>word-boundary only — same words, just split or joined differently</span>
+  </div>
+
+  <p class="normalize-note">Text shown normalized (lowercase, punctuation removed) — this is exactly the form that was scored, not a display choice. More on why in Methodology.</p>
+
+  <div class="ref-block" id="ref-block"></div>
+
+  <p class="insight-note">
+    Two systems can land on nearly the same overall error rate while making
+    very different <em>kinds</em> of mistakes below — one drops whole words,
+    another mostly mangles spacing between correct words. That difference
+    doesn't show up in a single WER number, only here.
+  </p>
+
+  <p class="cols-label">System outputs, compared against the reference above</p>
+  <div class="transcript-cols" id="transcript-cols"></div>
+</main>
+
+<footer class="site-foot" id="site-footer"></footer>
+
+<script src="js/data.js"></script>
+<script src="js/transcripts.js"></script>
+</body>
+</html>

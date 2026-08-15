@@ -1,0 +1,33 @@
+Procesor ja process ei tähenda sama asja.
+Procesor on riistvara komponent ja process, aga töötava programmi exemplar.
+Graaf ja graafik ei tähenda samuti sama asja.
+Graaf on diskreetse matematika struktuur, graafik on nagu näiteks andmeta visuaalne kujutis.
+Mudel võib tähendada masinõpe mudelid, andme mudelid või mõne süsteemi lihtsustatud kirjeldust.
+Andme mudel kirjeldab andmeta struktuur ja nende vahelisiseoseid.
+Masinõpe mudel kirjeldab õpitud funktsiooni, mis täisendab sisendi väljundiks.
+Närvi võrk ei ole sama, mis arvuti võrk.
+Närvi võrk on masinõpe mudel, arvuti võrk kühendab aga sead meid oma vahel.
+Muutmalu, püsi-malu, vahemalu ja virtuaalmalu on erinevad mõisted.
+Muutmalu tahistadekses agelil ühendiga RAM.
+Protsessori kiiretsisemist vahemalu nimetadakse cache-iks.
+SQL-baring võib sisaldada select, from, where, group by, order by, osa.
+Andme baasis või primaarvõiti olla armuline identifikaator ja välisvõiti võib piidata teise tabelid primaarvõitmele.
+Python, Java, JavaScript ja TypeScript on programeerimisega seotud nimed, kui need ei tähenda sama tehnoloogiat.
+JavaScript ja Java on erinevad programeerimiskeeled, huolimata nende sarnastest nimedest.
+Git, GitHub, GitLab ei ole samuti synonyymid.
+Git on versioonihaldussüsteem, GitHub ja GitLab on platformid, mis võimaldavad muuhulgas.
+Git repositoriume majutlada.
+Docker Container, Docker File, Docker Compose on omavahel seotud kui erinevad mõisted.
+Docker File kirjeldab Container pildi loomist.
+Docker Compose võimaldad kirjeldada mitmest teinusest koosnevat rakendust.
+IP-adress, MAC-adress, kumeeninimi ja URL tähendavad võrgus erinevaid ülesandeid.
+DNS seob kumeenid nimesid IP-adressitega.
+Tehisaru, tehisintellekt, masinõppe, süvaõppe ja generatiivne tehisintellekt on omavahel seotud, kui need ei tohiks automaatselt saa vastada.
+GPU, CPU, RAM, SST, SQL, DNS, TCP ja API on lühendid, mida tehnilises eestigeelses kõnes kasutatakse sagelik koos eestigeelsete sõnadega.
+Näiteks võib öelda API liides saadab JSON warmingus päringu, server töötleb selle ja salvestab tulemuse Postgres SQL-i anvebaasi.
+Teine näide on Pythonis töötav andmetöötlusprogramm.
+Loeb CSV-faili, puhastab andmet, kirjutab tulemuse SQL-andvebaasi ja Power BI kasutab neid andmeid arvanda visuaaliseerimiseks.
+Kulmas näide on RTX 5070 graafikkaprozessor.
+Toetab täna päevast CUDA-keskunda, võid ana Tarkvara paketei brugi uue GPU-architektuuri veel toetada.
+See viimane lause on oluline, sest Ristvara võib olla uuem või seda kasutama Tarkvara.
+Sellisel juhule ei tähenda vea teade tingimata seda, et Ristvara on vigaane probleem võib olla Tarkvara ja Ristvara ülduuses.

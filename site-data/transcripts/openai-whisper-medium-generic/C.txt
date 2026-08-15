@@ -1,0 +1,42 @@
+Diskreetne matemaatik kuulib struktuure, mille elementid on eristatavad ja sagelli loendatavad.
+Üks põhikonseptioon on hulk.
+Hulk on objektide kogum ning hulga element võib hulga kuuluda või sinna mitte kuuluda.
+Kahe hulga ühends sisaldab kõiki elemente, mis kuuluvad vähemalt ühteneist hulkadest.
+Ühisosa sisaldab elemente, mis kuuluvad mõlemasse hulga.
+Kui kõik hulga A elementid kuuluvad hulk ka B, siis on A hulga B alam hulk.
+Seos kirjeldab objektide vahelisisuhteid.
+Ekvivalentsusseos on refleksiivne, sümeetriline ja transitiivne.
+Osaline järjestus on refleksiivne, antisümeetriline ja transitiivne.
+Need mõisted kõlavad sarnaselt, kui kirjeldavad erinevaid matemaatilisi struktuure.
+Matemaatiline induksioon on tõestusmeetod.
+Õigepealt näidatakse, et väide kehtib alg juhul,
+seejärel eeldatakse, et väide kehtib mingi naturaal arvukorral,
+ning tõestatakse, et sellest järeldub väite kehtimine järgemise naturaal arvukorral.
+Graaf koosneb tipudest ja neid ühendavatest servadest.
+See kirjeldab tipude jada, kus järjestikkused tipud on servaga ühendatud.
+Sükkel on tee, mis jõuab tagasi algustipu.
+Mu on situsgraaf, milles ei ole sükkleid.
+Teis intelekti kontekstis tähendab mudel matemaatilist või arvutuslikku süsteemi,
+mis teisendab siis endi väljundiks.
+Masin õppes õpib mudel näidatest.
+Reenimise käigus muudatakse mudeli parametraid nii,
+et tema väljund oleks soovitud tulemusele võimalikult lähedal.
+Närvivõrk koosneb kichtidesse organiseeritud arvutusüksustest.
+Sisend kicht võtab pastuandmeid, peidetud kihid teisendavad neid
+ning väljundkicht annab tulemuse.
+Sygav närvivõrk sisaldab mitut peidetud kichti.
+Mudelitreenimisel kasutatakse kaafunktiooni, mis muudab mudeli vea suurust.
+Timerimisalgoritv muudab mudeli parametraid
+eesmärgiga kaafunktiooni väärtust vähendada.
+Üks levinud meetod on gradientlaskumine.
+Ületreenimine tähendab olukorda, kus mudel õppib
+treeningandmed liiga täpselt ära, kui te ei üldista hästi uutele ondmetele.
+Seedatud kasutatakse eraldi treening, kvaliteeriumi siia testandmeid.
+Keelemudel ennustab keelestruktuuri põhjal tõenäolisi tekstiadased.
+Kuurgeelemudel võib olla väga hea grammatika ja konteksti mõistimisel,
+kui kõneduvastus nõuab lisaks keelele ka helisignaali tõlgendamist.
+Kõneduvastuses peab süsteeme eristama häälikuid sõnu, hause, taustamüra.
+Eesti keel muudab ülesande huvitavaks, sest sõnadevormid muutuvad kähende ja pöörde tõttu
+ning liidsõnad võivad olla pikad.
+See tõttu võib speciaalselt Eesti keelele kohandatud mudel,
+teatud ülesandes olla täpsem kui palju suurem kui üldisem pitmekelne mudel.

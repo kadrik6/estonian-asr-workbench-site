@@ -1,0 +1,21 @@
+{
+  "workbench_version": "v0.1",
+  "export_generated_at": "2026-08-15T10:12:51Z",
+  "benchmark_methodology_version": "1.0",
+  "source_commit": "88d18fd87285047face4cc28c9b59cc1043fadb2",
+  "system_count": 10,
+  "benchmarked_system_count": 9,
+  "sets": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "pooled_scope": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

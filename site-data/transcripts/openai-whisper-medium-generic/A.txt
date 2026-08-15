@@ -1,0 +1,33 @@
+Arbuti koosneb Riistvarast ja Tarkvarast.
+Riistvara tähendab hüüsilisi komponente, näiteks prozessorit, muutmalu,
+talvestusseadet, emaplaeti ja grafikaprozessorit.
+Tarkvara koosneb programmidest ja juhistest, mida Riistvara täidab.
+Prozessor ehk CPU täidab programmide käske ja teeb arbutusi.
+Prozessori jõudlust ei määra ainult taktsagedus.
+Olulised on ka arhitektuur, tuumade arv, vahemalu, energiatarve ja see,
+kui palju käske, suudab prozessor ühe arhitektuur.
+Muutmalu ehk RAM hoiab andmeid, mida arbuti parajasti aktiivselt kasutab.
+RAM on püsi mälust oluliselt kiirem, kuid selle sisu kaab tavaliselt siis,
+kui arvuti väljal üleitadakse.
+Kui muutmalu jääb väheks, võib operatsioonisüsteem hakata kasutama
+salvestusseadet virtuaalmäluna.
+See on aegla sem, kui füüsiline muutmalu kasutamine.
+Grafikaprozessore GPU suudab teha väga palju sarna seid arvutusi paralelselt.
+Selle tõttu kasutadakse GPUsid lisaks grafikatöötlemisele ka masiniuppes ja tehisintellektis.
+Nervivõrkude treenimisel tuleb sageli korraga teha väga suur hulk matrix arvutusi,
+ning sellise töö jaoks sobib paralelne arhitektuur hästi.
+Operatsioonisüsteem juhib arvutiressursse.
+Ta haldab protsesse, mälu, haile, seeadmeid ja kasutaja õigusi.
+Prozess on töötava programmi eksemplar.
+Ühel programmil võib korraga olla mitu protsessi, ning ühes protsessis võib töötada mitulõime.
+Pailisüsteem määrab, kuidas andmed salvestusseadmel organiseeritakse.
+Pailidel on nimed, asukohad ja metaandmed.
+Operatsioonisüsteem pead teadma, millisel salvestusseadme osal pail paikneb
+ning millisel kasutajal on õigus seda lugeda või muuta.
+Nii võrgus suhtlevad seeadmed protokollide abil.
+IP-adress aidab määrata seeadmasukoha võrgus.
+TCP tagab usaldusväärase andmedastuse ja kontrollib, kas ketnid juavad kohale õigesjärjekorras.
+DNS aidab teisendada inimesele loetava domeeni nime võrguadressiks.
+Seega ei tööta arvuti komponentid eraldi.
+Procesor, mälu, salvestus, operatsioonisüsteem ja võrg muodustavad süsteemi,
+mille osad sõltuvad üks teisest.

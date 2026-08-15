@@ -1,0 +1,15 @@
+Arvuti koosneb riistvarast ja tarkvarast. Riistvara tähendab füüsilisi komponente, näiteks protsessorit, muutmälu, salvestusseadet, emaplaati ja graafikaprotsessorit. Tarkvara koosneb programmidest ja juhistest, mida riistvara täidab.
+
+Protsessor ehk CPU täidab programmide käske ja teeb arvutusi. Protsessori jõudlust ei määra ainult taktsagedus. Olulised on ka arhitektuur, tuumade arv, vahemälu, energiatarve ja see, kui palju käske suudab protsessor ühe taktsükli jooksul täita.
+
+Muutmälu ehk RAM hoiab andmeid, mida arvuti parajasti aktiivselt kasutab. RAM on püsimälust oluliselt kiirem, kuid selle sisu kaob tavaliselt siis, kui arvuti välja lülitatakse. Kui muutmälu jääb väheks, võib operatsioonisüsteem hakata kasutama salvestusseadet virtuaalmäluna. See on aeglasem kui füüsilise muutmälu kasutamine.
+
+Graafikaprotsessor ehk GPU suudab teha väga palju sarnaseid arvutusi paralleelselt. Selle tõttu kasutatakse GPU-sid lisaks graafika töötlemisele ka masinõppes ja tehisintellektis. Närvivõrkude treenimisel tuleb sageli korraga teha väga suur hulk maatriksarvutusi ning sellise töö jaoks sobib paralleelne arhitektuur hästi.
+
+Operatsioonisüsteem juhib arvuti ressursse. Ta haldab protsesse, mälu, faile, seadmeid ja kasutaja õigusi. Protsess on töötava programmi eksemplar. Ühel programmil võib korraga olla mitu protsessi ning ühes protsessis võib töötada mitu lõime.
+
+Failisüsteem määrab, kuidas andmed salvestusseadmel organiseeritakse. Failidel on nimed, asukohad ja metaandmed. Operatsioonisüsteem peab teadma, millisel salvestusseadme osal fail paikneb ning millisel kasutajal on õigus seda lugeda või muuta.
+
+Arvutivõrgus suhtlevad seadmed protokollide abil. IP-aadress aitab määrata seadme asukohta võrgus. TCP tagab usaldusväärse andmeedastuse ja kontrollib, kas paketid jõuavad kohale õiges järjekorras. DNS aitab teisendada inimesele loetava domeeninime võrguaadressiks.
+
+Seega ei tööta arvuti komponendid eraldi. Protsessor, mälu, salvestus, operatsioonisüsteem ja võrk moodustavad süsteemi, mille osad sõltuvad üksteisest.

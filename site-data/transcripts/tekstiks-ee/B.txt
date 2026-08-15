@@ -1,0 +1,26 @@
+
+Andmebaas on korrastatud andmekogum, mida saab süstemaatiliselt salvestada, otsida ja muuta. Relatsioonilises andmebaasis hoitakse andmeid tavaliselt tabelites.
+
+Tabel koosneb ridadest ja veergudest ning iga veerg kirjeldab mingit atribuuti. Primaarvõti identifitseerib tabelis ühekirje unikaalselt. Välisvõti võimaldab luua seose kahe tabeli vahel. Näiteks võib tellimuste tabel sisaldada kliendi identifikaatorit, mis viitab klientide tabeli primaarvõtmele.
+
+Andmete normaliseerimise eesmärk on vähendada tarbetut dubleerimist ja vältida olukordi, kus sama fakti tuleb muuta mitmes kohas. Halb andmemudel võib põhjustada vastuolulisi andmeid isegi siis, kui rakenduse programmi kood töötab tehniliselt õigesti.
+
+SQL on keel, mida kasutatakse relatsiooniliste andmebaasidega suhtlemiseks. Select päringuga saab andmeid lugeda, insert käsuga uusi ridu lisada, update käsuga olemasolevaid väärtusi muuta ja delete käsuga ridu kustutada.
+
+Join võimaldab ühendada omavahel seotud tabelite andmeid. Miner join tagastab read, millele leidub aste mõlemas tabelis. Left join säilitab ka vasakpoolsed tabeliread, millele teises tabelis vastet ei leidu. Indeks võib muuta päringu oluliselt kiiremaks, sest andmebaas ei pea alati kogu tabelit järjest läbi vaatama. Samal ajal ei ole indeks tasuta, indeksite hoidmine võtab ruumi ning andmete lisamisel ja muutmisel tuleb uuendada ka indeksid.
+
+Programmeerimises on muutuja nimi, mille kaudu programm pääseb ligi mingile väärtusele.
+
+Funktsioon koondab kokku tegevused, mida saab vajadusel korduvalt käivitada.
+
+Tingimuslause võimaldab programmil valida erinevate tegevuste vahel ja tsükkel võimaldab sama tegevust mitu korda korrata.
+
+Pythonis võib funktsioon võtta vastu parameetreid ja tagastada tulemuse. Objektorienteeritud programmeerimises kirjeldab klass objektide struktuuri ja käitumist.
+
+Objekt on konkreetne klassi põhjal loodud eksemplar.
+
+GIT on versiooni haldussüsteem.
+
+commit salvestab projekti muudatuste seisu ning branch võimaldab teha arendust eraldi harus. Merge ühendab erinevate harude muudatused. Konflikt tekib siis, kui GIT ei suuda automaatselt otsustada, kuidas kaks erinevat muudatust kokku ühendada.
+
+Booker võimaldab pakkida rakenduse koos selle käivitamiseks vajalike sõltuvustega konteinerisse. Konteiner ei ole sama mis virtuaalmasin, konteinerid jagavad host'i operatsioonisüsteemi Kernelit, mistõttu on nad tavaliselt kergemad ja käivituvad kiiremini.

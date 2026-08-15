@@ -1,0 +1,32 @@
+Andme baas on korrastatud andmekogum, mida saab süstemaatiliselt salvestada, otsida ja muuta.
+Relatsioonilises andme baasis hoitakse andmeid tavaliselt tabelites.
+Tabel koosneb ridadest ja veergudest ning iga veerg kirjeldab mingit attribuuti.
+Primaarvõtti identifitseerib tabelis ühe kirje unikaalselt.
+Välisvõtti võimaldab luua seose kahe tabeli vahel.
+Näiteks võib tellimuste tabel sisaldada kliendi identifikaatorit, mis viitab klientide tabeli primaarvõtmele.
+Andmete normaliseerimise eesmärk on vähendada tarpetud tubleerimist ja vältida olukordi, kus sama fakti tuleb muuta mitmes kohas.
+Halb andmemudel võib põhjustada vastuolulisi andmeid isegi siis, kui rakenduse programmi koods töötab tehniliselt õigesti.
+SQL on keel, mida kasutatakse relatsiooniliste andmebaasidega suhtlemiseks.
+SELECT-päringuga saab andmeid lugeda, INSERT-käsuga uusi ridu lisada, UPDATE-käsuga olemasolevaid väärtusi muuta ja DELETE-käsuga ridu kustutada.
+JOIN võimaldab ühendada oma vahel seotud tabelite andmeid.
+INNER JOIN tagastab read, millele leidub vaste mõlemas tabelis.
+LEFT JOIN säilitab ka vasakoolse tabeli read, millele teises tabelis vastet ei leidu.
+INDEX võib muuta päringu oluliselt kiiremaks, sest andmebaas ei pea alati kogu tabelit järjest läbi vaatama.
+Samal ajal ei ole INDEX tasuta.
+INDEXite hoidmine võtab ruumi ning andmete lisamisel ja muutmisel tuleb uuendada ka INDEXid.
+Programmeerimises on muutuja nimi, mille kaudu programm pääseb ligi mingile väärtusele.
+FUNKTSIOON koondab kogu tegevused, mida saab ajadusel korduvalt käivitada.
+Mingimus lause võimaldab programmil valida erinevate tegevuste vahel ja tsükkel võimaldab sama tegevust mitu korda korrata.
+PAIPHONIS VÕIB FUNKTSIOON VÕTTA VASTU PARAMETRI.
+PAIPHONIS VÕIB FUNKTSIOON VÕTTA VASTU PARAMETRI.
+PAIPHONIS VÕIB FUNKTSIOON VÕTTA VASTU PARAMETRI.
+PAIPHONIS VÕIB FUNKTSIOON VÕTTA VASTU PARAMETRID JA TAGASTEDA TULEMUSE.
+objektorienteeritud programmerimises kirjeldab plassobjektide struktuuri ja käitumist.
+objektorienteeritud programmerimises kirjeldab plassobjektide struktuuri ja käitumist.
+objekt on konkreetne klassi põhjal noodud eksemplar.
+objekt on konkreetne klassi põhjal noodud eksemplar.
+Komit salvestab projekti muudatuste seisu ning Branch võimaldab teha arendust eraldiharus
+Komit salvestab projekti muudatuste seisu ning Branch võimaldab teha arendust eraldiharus.
+Merge ühendab erinevate harude muudatused. Konflikt tekib siis, kui kit ei suuda automaatselt otsustada, kuidas kaks erinevat muudatust õhku ühendada.
+Lüüker võimaldab pakida rakenduse koos selle käivitamiseks vajalike sõltuvustega konteinerisse.
+Konteiner ei ole sama, mis virtuaalmasin. Konteinerid jagavad hosti, operatsioonisüsteemi, kärnelid, mis tõttu on nad tavaliselt kergemad ja käivituvad kiiremini.

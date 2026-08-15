@@ -1,0 +1,35 @@
+Diskreetne matemaatika uurib struktuure, mille elementid on eristatavad ja sageli loendatavad.
+Üks põhikonseptsioon on hulk. Hulk on objektide kogum ning hulka element võib hulka kuuluda või sinna mitte kuuluda.
+Kahe hulka ühend sisaldab kõiki elemente, mis kuuluvad vähemalt ühte neist hulkadest.
+Ühisosa sisaldab elemente, mis kuuluvad mõlemasse hulka.
+Kui kõik hulka A elementid kuuluvad hulka B, siis on A hulka B alam hulk.
+Seos kirjeldab objektide vahelisi suhteid.
+Ekvivalentsusseos on refleksiivne, sümeetriline ja transitiivne.
+Osaline järjestus on refleksiivne, antisümeetriline ja transitiivne.
+Need mõisted kõlavad sarnaselt, kuid kirjeldavad erinevaid matemaatilisi struktuure.
+Matemaatiline induksioon on sarnaselt.
+Matemaatiline induksioon on tõestusmeetod.
+Kõigepealt näidatakse, et väide kehtib alg juhul.
+Seejärel eeldatakse, et väide kehtib mingi naturaal arvukorral.
+Ning tõestatakse, et sellest järeldub väite kehtimine järgemise naturaal armukorral.
+Graaf koosneb tippudest ja neid ühendavatest servadest.
+T kirjeldab tippude jada, kus järjestikused tippud on servaga ühendatud.
+Tüppkel on T, mis jõuab tagasi algustippu.
+U on sidusgraaf, milles ei ole tsükleid.
+Tehisintelekti kontekstis tähendab mudel matemaatilist või arvutuslikku süsteemi, mis teisendab sisendi väljundiks.
+Masinõppes õpib mudel näidatest.
+Treenimise käigus muudatakse mudeli parameetreid nii, et tema väljund oleks soovitud tulemusele võimalikult lähedal.
+Järvivõrk koosneb kihtidesse organiseeritud arvutusüksustest.
+Sisendkiht võtab vastuandmeid, peidetud kihid teisendavad neid ning väljundkiht annab tulemuse.
+Sügav närvivõrk sisaldab mitut peidetud kihti.
+Mudeli treenimisel kasutatakse kaofunktsiooni, mis muudab mudeli vea suurust.
+Stimeerimisalgoritm muudab mudeli parameetreid eesmärgiga kaofunktsiooni väärtust vähendada.
+Üks levinud meetood on gradientlaskumine.
+Üle treenimine tähendab olukorda, kus mudel õpib treeningandmed liiga täpselt ära, kuid ei üldista hästi uutele andmetele.
+Seetõttu kasutatakse eraldi treeningvalideerimis- ja testandmeid.
+Keelemudel ennustab keelestruktuuri põhjal tõenäolisid tekstiadasid.
+Uur keelemudel võib olla väga hea grammatika- ja kontekstimõistmisel, kuid kõnetuvastus nõuab lisaks keelele ka helisignaali,
+kuid kõnetuvastuses peab süsteem eristama häälikult sõnu, pause, taustamüra.
+Eesti keel muudab ülesande huvitavaks, sest sõnadevormid muutuvad käände- ja pöördetõttu ning liitsõnad võivad olla pikad.
+See tõttu võib spetsiaalselt Eesti keelele kohandatud mudel, peatud ülesandes, olla täpsem kui palju suurem, kuid üldisem.
+Eesti keeleswood on kõigi palju suurem kui üldisem mitmegeelne mudel.

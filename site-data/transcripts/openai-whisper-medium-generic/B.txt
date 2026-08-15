@@ -1,0 +1,29 @@
+Andme baas on korrastatud andme kogum, mida saab süstemaatiliselt salvestada, otsida ja muuta.
+Relatsioonilises andme baasis hoitakse andmeid tavaliselt tabeltes.
+Tabel koosneb ridadest ja vergudest ning igaverg kirjaldab mingit atribuuti.
+Primaarvõiti identifitseerib tabelis ühe kirje unikaalselt.
+Välisveti võimalda bluua seose kahe tabeli vahel.
+Näiteks võib tellimuste tabel sisaldada kliendi identifikaatorit, mis miitab klientide tabeli primaarvõitmele.
+Ammete normaliseerimise eesmärk on vähendada tarbetud dubleerimist ja vältida olukorti, kus sama fakti tuleb muutamitmes kohas.
+Halb andmemudel võib põhjustada vastuolulisi andmeid isegi siis, kui rakenduse programmi koods töötab tehniliselt õigesti.
+SQL on keel, mida kasutatakse relatsiooniliste andme baasidega suhtlemiseks.
+Select päringuga saab andmeid lugeda, insert käsuga uusi ridu lisada, update käsuga olemas olevaid väärtusi muuta ja delete käsuga ridu kustutada.
+Join võimalda pühendada oma vahel seotud tabelite andmeid.
+Inner join tagastab read, millele leidub vaste mõlemast tabelis.
+Left join säilitab ka vasakkuulse tabeli read, millele teises tabelis vastet ei leidu.
+Index võib muutab päringu oluliselt kiiremaks, sest andme baasi peaa alati kogu tabelid järjest läbi vaatama.
+Samal ajal ei ole index tasuta.
+Indexite hoidmine võtab ruumi ning andmete lisamisel ja muutmisel tuleb uuendada ka indexid.
+Programmeerimises on muutu ja nimi, mille kaudu program pääseb ligi mingile väärtusele.
+Punktioon kuondab kogu tegegused, mida saab ajaltusel korduvalt käivitada.
+Mingimus lause võimalda programmil valida erinevate tegeguste vahel ja tükkel võimalda sama tegegust mitu korda korratada.
+Pythonis võib punktioon võtta vastu parametreid ja takastada tulemuse.
+Objektor orjenteeritud programmeerimises kirjaldab klass objektide struktuuria käitumist.
+Objekt on konkreetne klassi põhjal loodud exemplar.
+Kit on versioonihaldussüsteem.
+Commit salvestab projekti muudatuste seisu ning Branch võimalda teha arendust eraldi harus.
+Merge ühendab erinevate harude muudatused.
+Konflikt tekib siis, kui kit ei suuda automaatselt otsustada, kuidas kaks erinevat muudatust kukku ühendada.
+Kukker võimalda pakida rakenduse koos selle käivitamiseks vajalike sõltukustega konteinerisse.
+Konteiner ei ole sama, mis virtuaalmasin.
+Konteinerid jagavad hõusti, operatsioonisüsteemi, kernelid, mis tõttu on nad tavaliselt kergemad ja käivituvad kiiremini.

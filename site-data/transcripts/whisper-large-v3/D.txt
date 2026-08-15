@@ -1,0 +1,35 @@
+Protsessor ja protsess ei tähenda sama asja.
+Protsessor on riistvara komponent ja protsess, aga töötava programmi eksemplar.
+Graaf ja graafik ei tähenda samuti sama asja.
+Graaf on diskreetse matemaatika struktuur, graafik on aga näiteks andmete visuaalne kujutis.
+Mudel võib tähendada masinõppemudelid, andmemudelid või mõne süsteemi lihtsustatud kirjeldust.
+Andmemudel kirjeldab andmete struktuuri ja nende vahel siis heoseid.
+Masinõppemudel kirjeldab õpitud funksiooni, mis teisendab sisendi väljundiks.
+Närvivõrk ei ole sama, mis arvutivõrk.
+Närvivõrk on masinõppemudel, arvutivõrk ühendab aga seadmeid oma vahel.
+Muutmelu, püsimelu, vahemelu ja virtuaalmelu on erinevad mõisted.
+Muutmelu tähistatakse sageli lühendiga RAM.
+Protsessori kiiret sisemist vahemelu nimetatakse.
+SQL-bäring võib sisaldada SELECT FROM WHERE GROUP BY ORDER BY osa.
+Andmebaasis võib primaarvõtti olla armuline identifikaator ja välisvõtti võib piidata teise tabeli primaarvõttmele.
+Python, Java, JavaScript ja TypeScript on programmeerimisega seotud nimed, kuid need ei tähenda sama tehnoloogiat.
+JavaScript on võimalik, kui neid ei tähenda sama tehnoloogiat.
+JavaScript ja Java on erinevad programmeerimiskeeled, hoolimata nende sarnastest nimedest.
+Git, GitHub, GitLab ei ole samuti sünonüümid.
+Git on versioonihaldussüsteem, GitHub ja GitLab on platvormid, mis võimaldavad muuhulgas gitrepositooriume majutada.
+Docker container, Docker file, Docker compose on oma vahel seotud, kuid erinevad mõisted.
+Docker file kirjutab, kirjeldab container pildi loomist.
+Docker compose võimaldab kirjeldada mitmest teenusest koosnevat rakendust.
+IP aadress, MAC aadress, romeeni nimi ja URL tähendavad võrgus erinevaid ülesandeid.
+DNS seob romeeni nimesid IP aadressitega.
+Tehisaru, tehisintelekt.
+Masinõppe, süvauppe ja generatiivne tehisintelekt on oma vahel seotud, kuid neid ei tohiks automaatselt samastada.
+GPU, CPU, RAM, SSD, SQL, DNS, TCP ja API on lühendid, mida tehnilises eestikeelses kõnes kasutatakse sageli koos eestikeelsete sõnadega.
+Näiteks võib öelda, API liides saadab JSON vormingus.
+Päringu, server töötleb selle ja salvestab tulemuse Postgres SQL-i andmebaasi.
+Teine näide on Pythonis töötav andmetöötlusprogramm.
+Lueb CSV-faili, puhastab andmed, kirjutab tulemuse SQL-andmebaasi ja Power BI kasutab neid andmeid arvanda visualiseerimiseks.
+Kolmas näide on RTX 5070 graafikaprotsessor.
+Toetab tänapäevast kuudaja keskkonda, kuid vanaa Tarkvara pakette ei pruugi uue GPU arhitektuuri veel toetada.
+See viimane lause on oluline, sest Riistvara võib olla uuem kui seda kasutav Tarkvara.
+Sellisel juhul ei tähenda vea teade tingimata seda, et Riistvara on vigane, probleem võib olla Tarkvara ja Riistvara ülduuses.

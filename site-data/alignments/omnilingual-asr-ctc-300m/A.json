@@ -1,0 +1,2226 @@
+{
+  "system_id": "omnilingual-asr-ctc-300m",
+  "set": "A",
+  "ops": [
+    {
+      "op": "substitution",
+      "ref": [
+        "arvuti"
+      ],
+      "hyp": [
+        "arbuti"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "koosneb"
+      ],
+      "hyp": [
+        "koosneb"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "riistvarast"
+      ],
+      "hyp": [
+        "riistvarast"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tarkvarast"
+      ],
+      "hyp": [
+        "tarkvarast"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "riistvara"
+      ],
+      "hyp": [
+        "riistvara"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tähendab"
+      ],
+      "hyp": [
+        "tähendab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "füüsilisi"
+      ],
+      "hyp": [
+        "füüsilisi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "komponente"
+      ],
+      "hyp": [
+        "komponente"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "näiteks"
+      ],
+      "hyp": [
+        "naiteks"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "protsessorit"
+      ],
+      "hyp": [
+        "protsessorit"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "muutmälu"
+      ],
+      "hyp": [
+        "muutmälu"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "salvestusseadet"
+      ],
+      "hyp": [
+        "salvestus",
+        "seadet"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "emaplaati"
+      ],
+      "hyp": [
+        "emaplaati"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "graafikaprotsessorit"
+      ],
+      "hyp": [
+        "graafika",
+        "protsessorit"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tarkvara"
+      ],
+      "hyp": [
+        "tarkvara"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "koosneb"
+      ],
+      "hyp": [
+        "koosneb"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "programmidest"
+      ],
+      "hyp": [
+        "programmidest"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "juhistest"
+      ],
+      "hyp": [
+        "juhistest"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "mida"
+      ],
+      "hyp": [
+        "mida"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "riistvara"
+      ],
+      "hyp": [
+        "riistvara"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "täidab"
+      ],
+      "hyp": [
+        "täidab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "protsessor"
+      ],
+      "hyp": [
+        "protsessor"
+      ]
+    },
+    {
+      "op": "deletion",
+      "ref": [
+        "ehk"
+      ],
+      "hyp": []
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "cpu"
+      ],
+      "hyp": [
+        "hkcpu"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "täidab"
+      ],
+      "hyp": [
+        "taidab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "programmide"
+      ],
+      "hyp": [
+        "programmide"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "käske"
+      ],
+      "hyp": [
+        "käske"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "teeb"
+      ],
+      "hyp": [
+        "teeb"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "arvutusi"
+      ],
+      "hyp": [
+        "arvutusi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "protsessori"
+      ],
+      "hyp": [
+        "protsessori"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "jõudlust"
+      ],
+      "hyp": [
+        "jõudlust"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ei"
+      ],
+      "hyp": [
+        "ei"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "määra"
+      ],
+      "hyp": [
+        "määra"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ainult"
+      ],
+      "hyp": [
+        "ainult"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "taktsagedus"
+      ],
+      "hyp": [
+        "takt",
+        "sagedus"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "olulised"
+      ],
+      "hyp": [
+        "olulised"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "on"
+      ],
+      "hyp": [
+        "on"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ka"
+      ],
+      "hyp": [
+        "ka"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "arhitektuur"
+      ],
+      "hyp": [
+        "arhitektuur"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tuumade"
+      ],
+      "hyp": [
+        "tuumade"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "arv"
+      ],
+      "hyp": [
+        "arv"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "vahemälu"
+      ],
+      "hyp": [
+        "vahemälu"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "energiatarve"
+      ],
+      "hyp": [
+        "energia",
+        "tarve"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "see"
+      ],
+      "hyp": [
+        "see"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kui"
+      ],
+      "hyp": [
+        "kui"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "palju"
+      ],
+      "hyp": [
+        "palju"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "käske"
+      ],
+      "hyp": [
+        "käske"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "suudab"
+      ],
+      "hyp": [
+        "suudab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "protsessor"
+      ],
+      "hyp": [
+        "protsessor"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ühe"
+      ],
+      "hyp": [
+        "ühe"
+      ]
+    },
+    {
+      "op": "deletion",
+      "ref": [
+        "taktsükli"
+      ],
+      "hyp": []
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "jooksul"
+      ],
+      "hyp": [
+        "ttklijooksul"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "täita"
+      ],
+      "hyp": [
+        "täita"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "muutmälu"
+      ],
+      "hyp": [
+        "muutmälu"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ehk"
+      ],
+      "hyp": [
+        "ehk"
+      ]
+    },
+    {
+      "op": "deletion",
+      "ref": [
+        "ram"
+      ],
+      "hyp": []
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "hoiab"
+      ],
+      "hyp": [
+        "ramm"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "andmeid"
+      ],
+      "hyp": [
+        "hoiapandmeid"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "mida"
+      ],
+      "hyp": [
+        "mida"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "arvuti"
+      ],
+      "hyp": [
+        "arvuti"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "parajasti"
+      ],
+      "hyp": [
+        "parajasti"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "aktiivselt"
+      ],
+      "hyp": [
+        "aktiivselt"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kasutab"
+      ],
+      "hyp": [
+        "kasutab"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "ram"
+      ],
+      "hyp": [
+        "ramm"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "on"
+      ],
+      "hyp": [
+        "on"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "püsimälust"
+      ],
+      "hyp": [
+        "püsimälust"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "oluliselt"
+      ],
+      "hyp": [
+        "oluliselt"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kiirem"
+      ],
+      "hyp": [
+        "kiirem"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kuid"
+      ],
+      "hyp": [
+        "kuid"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "selle"
+      ],
+      "hyp": [
+        "selle"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "sisu",
+        "kaob"
+      ],
+      "hyp": [
+        "sisukaob"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tavaliselt"
+      ],
+      "hyp": [
+        "tavaliselt"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "siis"
+      ],
+      "hyp": [
+        "siis"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kui"
+      ],
+      "hyp": [
+        "kui"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "arvuti"
+      ],
+      "hyp": [
+        "arvuti"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "välja",
+        "lülitatakse"
+      ],
+      "hyp": [
+        "väljalülitatakse"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kui"
+      ],
+      "hyp": [
+        "kui"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "muutmälu"
+      ],
+      "hyp": [
+        "muutmälu"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "jääb"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "väheks"
+      ],
+      "hyp": [
+        "päheks"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "võib"
+      ],
+      "hyp": [
+        "võib"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "operatsioonisüsteem"
+      ],
+      "hyp": [
+        "operatsioonisüsteem"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "hakata"
+      ],
+      "hyp": [
+        "hakkata"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kasutama"
+      ],
+      "hyp": [
+        "kasutama"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "salvestusseadet"
+      ],
+      "hyp": [
+        "salvestus",
+        "seadet"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "virtuaalmäluna"
+      ],
+      "hyp": [
+        "virtuaalmäluna"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "see"
+      ],
+      "hyp": [
+        "see"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "on"
+      ],
+      "hyp": [
+        "on"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "aeglasem"
+      ],
+      "hyp": [
+        "aeglasem"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kui"
+      ],
+      "hyp": [
+        "kui"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "füüsilise"
+      ],
+      "hyp": [
+        "füüsiline"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "muutmälu"
+      ],
+      "hyp": [
+        "muutmälu"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kasutamine"
+      ],
+      "hyp": [
+        "kasutamine"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "graafikaprotsessor"
+      ],
+      "hyp": [
+        "raafika"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "ehk"
+      ],
+      "hyp": [
+        "protsessore"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "gpu"
+      ],
+      "hyp": [
+        "kpu"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "suudab"
+      ],
+      "hyp": [
+        "suudab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "teha"
+      ],
+      "hyp": [
+        "teha"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "väga"
+      ],
+      "hyp": [
+        "väga"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "palju"
+      ],
+      "hyp": [
+        "palju"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "sarnaseid"
+      ],
+      "hyp": [
+        "sarnaseid"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "arvutusi"
+      ],
+      "hyp": [
+        "arvutusi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "paralleelselt"
+      ],
+      "hyp": [
+        "paralleelselt"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "selle"
+      ],
+      "hyp": [
+        "selle"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tõttu"
+      ],
+      "hyp": [
+        "tõttu"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kasutatakse"
+      ],
+      "hyp": [
+        "kasutatakse"
+      ]
+    },
+    {
+      "op": "deletion",
+      "ref": [
+        "gpu"
+      ],
+      "hyp": []
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "sid"
+      ],
+      "hyp": [
+        "kpuusid"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "lisaks"
+      ],
+      "hyp": [
+        "lisaks"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "graafika"
+      ],
+      "hyp": [
+        "graafika"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "töötlemisele"
+      ],
+      "hyp": [
+        "töötlemisele"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ka"
+      ],
+      "hyp": [
+        "ka"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "masinõppes"
+      ],
+      "hyp": [
+        "masinõppes"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "insertion",
+      "ref": [],
+      "hyp": [
+        "tehis"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "tehisintellektis"
+      ],
+      "hyp": [
+        "intelektis"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "närvivõrkude"
+      ],
+      "hyp": [
+        "närvivõrkude"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "treenimisel"
+      ],
+      "hyp": [
+        "treenimisel"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tuleb"
+      ],
+      "hyp": [
+        "tuleb"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "sageli"
+      ],
+      "hyp": [
+        "sageli"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "korraga"
+      ],
+      "hyp": [
+        "korraga"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "teha"
+      ],
+      "hyp": [
+        "teha"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "väga"
+      ],
+      "hyp": [
+        "väga"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "suur",
+        "hulk"
+      ],
+      "hyp": [
+        "suurhulk"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "maatriksarvutusi"
+      ],
+      "hyp": [
+        "maadriks"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "ning"
+      ],
+      "hyp": [
+        "arvutusi"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "sellise"
+      ],
+      "hyp": [
+        "ning"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "töö"
+      ],
+      "hyp": [
+        "sellised"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "jaoks"
+      ],
+      "hyp": [
+        "ööjaoks"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "sobib"
+      ],
+      "hyp": [
+        "sobib"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "paralleelne"
+      ],
+      "hyp": [
+        "paralleelne"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "arhitektuur"
+      ],
+      "hyp": [
+        "arhitektuur"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "hästi"
+      ],
+      "hyp": [
+        "hästi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "operatsioonisüsteem"
+      ],
+      "hyp": [
+        "operatsioonisüsteem"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "juhib"
+      ],
+      "hyp": [
+        "juhib"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "arvuti"
+      ],
+      "hyp": [
+        "arvuti"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ressursse"
+      ],
+      "hyp": [
+        "ressursse"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ta"
+      ],
+      "hyp": [
+        "ta"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "haldab"
+      ],
+      "hyp": [
+        "haldab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "protsesse"
+      ],
+      "hyp": [
+        "protsesse"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "mälu"
+      ],
+      "hyp": [
+        "mälu"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "faile"
+      ],
+      "hyp": [
+        "paile"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "seadmeid"
+      ],
+      "hyp": [
+        "seadmeid"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kasutaja"
+      ],
+      "hyp": [
+        "kasutaja"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "õigusi"
+      ],
+      "hyp": [
+        "õigusi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "protsess"
+      ],
+      "hyp": [
+        "protsess"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "on"
+      ],
+      "hyp": [
+        "on"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "töötava"
+      ],
+      "hyp": [
+        "töötava"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "programmi"
+      ],
+      "hyp": [
+        "programmi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "eksemplar"
+      ],
+      "hyp": [
+        "eksemplar"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ühel"
+      ],
+      "hyp": [
+        "ühel"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "programmil"
+      ],
+      "hyp": [
+        "programmil"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "võib"
+      ],
+      "hyp": [
+        "võib"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "korraga"
+      ],
+      "hyp": [
+        "korraga"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "olla"
+      ],
+      "hyp": [
+        "olla"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "mitu",
+        "protsessi"
+      ],
+      "hyp": [
+        "mituprotsessi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ning"
+      ],
+      "hyp": [
+        "ning"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ühes"
+      ],
+      "hyp": [
+        "ühes"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "protsessis"
+      ],
+      "hyp": [
+        "protsessis"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "võib"
+      ],
+      "hyp": [
+        "võib"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "töötada"
+      ],
+      "hyp": [
+        "töötada"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "mitu",
+        "lõime"
+      ],
+      "hyp": [
+        "mitulõime"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "failisüsteem"
+      ],
+      "hyp": [
+        "pailisüsteem"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "määrab"
+      ],
+      "hyp": [
+        "määrab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kuidas"
+      ],
+      "hyp": [
+        "kuidas"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "andmed"
+      ],
+      "hyp": [
+        "andmed"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "salvestusseadmel"
+      ],
+      "hyp": [
+        "salvestusseadmel"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "organiseeritakse"
+      ],
+      "hyp": [
+        "organiseeritakse"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "failidel"
+      ],
+      "hyp": [
+        "vailidel"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "on"
+      ],
+      "hyp": [
+        "on"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "nimed"
+      ],
+      "hyp": [
+        "nimed"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "asukohad"
+      ],
+      "hyp": [
+        "asukohad"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "metaandmed"
+      ],
+      "hyp": [
+        "meteandmed"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "operatsioonisüsteem"
+      ],
+      "hyp": [
+        "operatsioonisüsteem"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "peab"
+      ],
+      "hyp": [
+        "pead"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "teadma"
+      ],
+      "hyp": [
+        "peadma"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "millisel"
+      ],
+      "hyp": [
+        "millisel"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "salvestusseadme"
+      ],
+      "hyp": [
+        "salvestusseadma"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "osal"
+      ],
+      "hyp": [
+        "osal"
+      ]
+    },
+    {
+      "op": "deletion",
+      "ref": [
+        "fail"
+      ],
+      "hyp": []
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "paikneb"
+      ],
+      "hyp": [
+        "vailpaikneb"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ning"
+      ],
+      "hyp": [
+        "ning"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "millisel"
+      ],
+      "hyp": [
+        "millisel"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kasutajal"
+      ],
+      "hyp": [
+        "kasutajal"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "on"
+      ],
+      "hyp": [
+        "on"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "õigus"
+      ],
+      "hyp": [
+        "õigus"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "seda"
+      ],
+      "hyp": [
+        "seda"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "lugeda"
+      ],
+      "hyp": [
+        "lugeda"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "või"
+      ],
+      "hyp": [
+        "või"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "muuta"
+      ],
+      "hyp": [
+        "muuta"
+      ]
+    },
+    {
+      "op": "insertion",
+      "ref": [],
+      "hyp": [
+        "arviti"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "arvutivõrgus"
+      ],
+      "hyp": [
+        "võrgus"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "suhtlevad"
+      ],
+      "hyp": [
+        "suhtlevad"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "seadmed"
+      ],
+      "hyp": [
+        "seadmed"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "protokollide"
+      ],
+      "hyp": [
+        "protogollid"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "abil"
+      ],
+      "hyp": [
+        "abil"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ip"
+      ],
+      "hyp": [
+        "ip"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "aadress"
+      ],
+      "hyp": [
+        "adres"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "aitab"
+      ],
+      "hyp": [
+        "aitab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "määrata"
+      ],
+      "hyp": [
+        "määrata"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "seadme"
+      ],
+      "hyp": [
+        "seadme"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "asukohta"
+      ],
+      "hyp": [
+        "asukoha"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "võrgus"
+      ],
+      "hyp": [
+        "võrgus"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "tcp"
+      ],
+      "hyp": [
+        "pcp"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tagab"
+      ],
+      "hyp": [
+        "tagab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "usaldusväärse"
+      ],
+      "hyp": [
+        "usaldusväärse"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "andmeedastuse"
+      ],
+      "hyp": [
+        "andmedastuse"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kontrollib"
+      ],
+      "hyp": [
+        "kontrollib"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kas"
+      ],
+      "hyp": [
+        "kas"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "paketid"
+      ],
+      "hyp": [
+        "paketid"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "jõuavad"
+      ],
+      "hyp": [
+        "jõuavad"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "kohale"
+      ],
+      "hyp": [
+        "kohale"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "õiges"
+      ],
+      "hyp": [
+        "õiges"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "järjekorras"
+      ],
+      "hyp": [
+        "järjekorras"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "dns"
+      ],
+      "hyp": [
+        "pns"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "aitab"
+      ],
+      "hyp": [
+        "aitab"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "teisendada"
+      ],
+      "hyp": [
+        "teisendada"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "inimesele"
+      ],
+      "hyp": [
+        "inimesele"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "loetava"
+      ],
+      "hyp": [
+        "loetava"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "domeeninime"
+      ],
+      "hyp": [
+        "domeeninime"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "võrguaadressiks"
+      ],
+      "hyp": [
+        "võrguadressiks"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "seega"
+      ],
+      "hyp": [
+        "seega"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ei"
+      ],
+      "hyp": [
+        "ei"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "tööta"
+      ],
+      "hyp": [
+        "tööta"
+      ]
+    },
+    {
+      "op": "substitution",
+      "ref": [
+        "arvuti"
+      ],
+      "hyp": [
+        "arguti"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "komponendid"
+      ],
+      "hyp": [
+        "komponendid"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "eraldi"
+      ],
+      "hyp": [
+        "eraldi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "protsessor"
+      ],
+      "hyp": [
+        "protsessor"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "mälu"
+      ],
+      "hyp": [
+        "mälu"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "salvestus"
+      ],
+      "hyp": [
+        "salvestus"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "operatsioonisüsteem"
+      ],
+      "hyp": [
+        "operatsioonisüsteem"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "ja"
+      ],
+      "hyp": [
+        "ja"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "võrk"
+      ],
+      "hyp": [
+        "võrk"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "moodustavad"
+      ],
+      "hyp": [
+        "moodustavad"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "süsteemi"
+      ],
+      "hyp": [
+        "süsteemi"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "mille"
+      ],
+      "hyp": [
+        "mille"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "osad"
+      ],
+      "hyp": [
+        "osad"
+      ]
+    },
+    {
+      "op": "correct",
+      "ref": [
+        "sõltuvad"
+      ],
+      "hyp": [
+        "sõltuvad"
+      ]
+    },
+    {
+      "op": "boundary",
+      "ref": [
+        "üksteisest"
+      ],
+      "hyp": [
+        "üks",
+        "teisest"
+      ]
+    }
+  ]
+}

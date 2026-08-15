@@ -1,0 +1,26 @@
+Arvuti koosneb riistvarast ja tarkvarast.
+Riistvara tähendab hüüsilisi komponente, näiteks protsessorit, muutmelu, salvestusseadet, emaplaati ja graafika protsessorit.
+Tarkvara koosneb programmidest ja juhistest, mida riistvara täidab.
+Protsessor, ehk CPU, täidab programmide käske ja teeb arvutusi.
+Protsessori jõudlust ei määra ainult taktsagedus. Olulised on ka arhitektuur, kuumade arv, vahemelu, energiatarve ja see, kui palju käske suudab protsessor ühe liiuksul täita.
+Muutmelu, ehk RAM, hoiab andmeid, mida arvuti parajasti aktiivselt kasutab.
+RAM on püsimelust oluliselt kiirem, kuid selle sisu kaob tavaliselt siis, kui arvuti välja lüütatakse.
+Kui muutmelu jääb väheks, võib operatsioonisüsteem hakata kasutama salvestusseadet virtuaalmeluna.
+See on aeglasem kui füüsiline muutmelu kasutamine.
+Graafika protsessore, ehk GPU, suudab teha väga palju sarnaseid arvutusi paralleelselt.
+Selle tõttu kasutatakse GPU-sid lisaks graafika töötlemisele ka masinõppes ja tehisintelektis.
+Nervi võrkude treenimisel tuleb sageli korraga teha väga suur hulk matrix arvutusi ning sellise töö jaoks sobib paralleelne arhitektuur hästi.
+Operatsioonisüsteem juhib arvuti ressursse. Ta haldab protsesse, mälu, paile, seadmeid ja kasutaja õigusi.
+Protsess on töötava programmi eksemplar.
+Ühel programmil võib korraga olla mitu protsess.
+Ühes protsessis võib töötada mitu lõime.
+Pailisüsteem määrab, kuidas andmed salvestusseadmel organiseeritakse.
+Pailidel on nimed, asukohad ja meta-andmed.
+Operatsioonisüsteem peab teadma, millisel salvestusseadme osal fail paikneb ning millisel kasutajal on õigus seda lukeda või muuta.
+Arvuti põrgus suhtlevad seadmed protokollide abil.
+IP-aadress aitab määrata seadma asukoha võrgus.
+TCP tagab usaldusväärse andmedastuse ja kontrollib, kas ketjid juovad kohale õiges järjekorras.
+DNS aitab teisendada inimesele loetava domeeni nime võrguaadressiks.
+Seega ei tööta arvuti komponentid eraldi.
+Protsessor, mälu, salvestus, operatsioonisüsteem.
+Ja võrg moodustavad süsteemi, mille osad sõltuvad üksteisest.

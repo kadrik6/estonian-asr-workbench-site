@@ -1,0 +1,18 @@
+
+Protsessor ja protsess ei tähenda sama asja. Protsessor on riistvara komponent ja protsess, aga töötava programmi eksemplar.
+
+Graafia graafik ei tähenda samuti sama asja. Graaf on diskreetse matemaatika struktuur. Graafik on aga näiteks andmete visuaalne kujutis. Mudel võib tähendada masinõppemudelit, andmemudelit või mõne süsteemi lihtsustatud kirjeldust. Andmemudel kirjeldab andmete struktuuri ja nendevahelisi seoseid. Masinõppemudel kirjeldab õpitud funktsiooni, mis teisendab sisendi väljundiks. Närvivõrk ei ole sama, mis arvutivõrk. Närvivõrk on masinõppemudel, arvutivõrk ühendab aga seadmeid omavahel.
+
+Muutmälu, püsimälu, vahemälu ja virtuaalmälu on erinevad mõisted. Muutmälu tähistatakse sageli lühendiga RAM. Protsessori kiiret sisemist vahemälu nimetatakse cache'iks. SQL päring võib sisaldada select from where group by order by osa. Andmebaasis võib primaarvõti olla arvuline identifikaator ja välisvõti võib viidata teise tabeli primaarvõtmele. Python, Java, JavaScript ja Typescript on programmeerimisega seotud nimed, kuid need ei tähenda sama tehnoloogiat. JavaScript ja Java on erinevad programmeerimiskeeled, hoolimata nende sarnastest nimedest. GIT, GitHub, GitLab ei ole samuti sünonüümid. GIT on versiooni haldussüsteem, GitHub ja GitLab on platvormid, mis võimaldavad muuhulgas GIT repositooriume majutada. Docker konteiner, Docker file, Docker compose on omavahel seotud, kuid erinevad mõisted.
+
+Docker file kirjutab, kirjeldab konteinerpildi loomist. Docker compose võimaldab kirjeldada mitmest teenusest koosnevat rakendust.
+
+IP aadress, Mac aadress, domeeni nimi ja URL tähendavad võrgus erinevaid ülesandeid. BNS seob domeeni nimesid IP aadressidega. Tehisaru, tehisintellekt, masinõpe, süvaõpe ja generatiivne tehisintellekt on omavahel seotud, kuid neid ei tohiks automaatselt samastada. GPU, CPU, RAM, SSD, SQL, BNS, PCB ja API on lühendid, mida tehnilises eestikeelses kõnes kasutatakse sageli koos eestikeelsete sõnadega. Näiteks võib öelda, API liides saadab JSON vormingus päringu, server töötleb selle ja salvestab tulemuse PostgreSQL-i andmebaasi. Teine näide on Pythonis töötav andmetöötlusprogramm.
+
+Loeb CSV faili, puhastab andmed, kirjutab tulemuse SQL andmebaasi ja Power BI kasutab neid andmeid aruande visualiseerimiseks.
+
+Kolmas näide on RTX viiskümmend seitsekümmend graafikaprotsessor, toetab tänapäevast QDA keskkonda, kuid vana tarkvarapakett ei pruugi uue GPU arhitektuuri veel toetada.
+
+Viimane lause on oluline, sest riistvara võib olla uuem kui seda kasutav tarkvara.
+
+Sellisel juhul ei tähenda veateade tingimata seda, et riistvara on vigane, probleem võib olla tarkvara ja riistvara ülduvuses.

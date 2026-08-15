@@ -1,0 +1,407 @@
+[
+  {
+    "system_id": "tekstiks-ee",
+    "set": "A",
+    "wer_percent": "4.8",
+    "cer_percent": "0.4",
+    "compound_aware_wer_percent": "2.4",
+    "reference_words": "250",
+    "hypothesis_words": "251"
+  },
+  {
+    "system_id": "tekstiks-ee",
+    "set": "B",
+    "wer_percent": "5.02",
+    "cer_percent": "0.34",
+    "compound_aware_wer_percent": "1.67",
+    "reference_words": "299",
+    "hypothesis_words": "300"
+  },
+  {
+    "system_id": "tekstiks-ee",
+    "set": "C",
+    "wer_percent": "4.43",
+    "cer_percent": "0.86",
+    "compound_aware_wer_percent": "2.53",
+    "reference_words": "316",
+    "hypothesis_words": "314"
+  },
+  {
+    "system_id": "tekstiks-ee",
+    "set": "D",
+    "wer_percent": "9.47",
+    "cer_percent": "2.53",
+    "compound_aware_wer_percent": "5.03",
+    "reference_words": "338",
+    "hypothesis_words": "340"
+  },
+  {
+    "system_id": "tekstiks-ee",
+    "set": "E",
+    "wer_percent": "12.03",
+    "cer_percent": "7.57",
+    "compound_aware_wer_percent": "12.03",
+    "reference_words": "241",
+    "hypothesis_words": "251"
+  },
+  {
+    "system_id": "taltech-local-whisper-medium",
+    "set": "A",
+    "wer_percent": "11.2",
+    "cer_percent": "0.98",
+    "compound_aware_wer_percent": "5.6",
+    "reference_words": "250",
+    "hypothesis_words": "258"
+  },
+  {
+    "system_id": "taltech-local-whisper-medium",
+    "set": "B",
+    "wer_percent": "8.03",
+    "cer_percent": "2.27",
+    "compound_aware_wer_percent": "5.35",
+    "reference_words": "299",
+    "hypothesis_words": "294"
+  },
+  {
+    "system_id": "taltech-local-whisper-medium",
+    "set": "C",
+    "wer_percent": "5.7",
+    "cer_percent": "0.86",
+    "compound_aware_wer_percent": "2.53",
+    "reference_words": "316",
+    "hypothesis_words": "314"
+  },
+  {
+    "system_id": "taltech-local-whisper-medium",
+    "set": "D",
+    "wer_percent": "13.61",
+    "cer_percent": "3.48",
+    "compound_aware_wer_percent": "9.47",
+    "reference_words": "338",
+    "hypothesis_words": "328"
+  },
+  {
+    "system_id": "taltech-local-whisper-medium",
+    "set": "E",
+    "wer_percent": "11.62",
+    "cer_percent": "7.86",
+    "compound_aware_wer_percent": "11.62",
+    "reference_words": "241",
+    "hypothesis_words": "248"
+  },
+  {
+    "system_id": "microsoft-word-transcribe",
+    "set": "A",
+    "wer_percent": "15.2",
+    "cer_percent": "2.87",
+    "compound_aware_wer_percent": "9.6",
+    "reference_words": "250",
+    "hypothesis_words": "260"
+  },
+  {
+    "system_id": "microsoft-word-transcribe",
+    "set": "B",
+    "wer_percent": "11.71",
+    "cer_percent": "2.46",
+    "compound_aware_wer_percent": "8.36",
+    "reference_words": "299",
+    "hypothesis_words": "304"
+  },
+  {
+    "system_id": "microsoft-word-transcribe",
+    "set": "C",
+    "wer_percent": "9.49",
+    "cer_percent": "1.73",
+    "compound_aware_wer_percent": "5.06",
+    "reference_words": "316",
+    "hypothesis_words": "323"
+  },
+  {
+    "system_id": "microsoft-word-transcribe",
+    "set": "D",
+    "wer_percent": "21.01",
+    "cer_percent": "5.51",
+    "compound_aware_wer_percent": "18.05",
+    "reference_words": "338",
+    "hypothesis_words": "344"
+  },
+  {
+    "system_id": "microsoft-word-transcribe",
+    "set": "E",
+    "wer_percent": "15.77",
+    "cer_percent": "9.05",
+    "compound_aware_wer_percent": "14.94",
+    "reference_words": "241",
+    "hypothesis_words": "252"
+  },
+  {
+    "system_id": "openai-whisper-medium-generic",
+    "set": "A",
+    "wer_percent": "30.4",
+    "cer_percent": "5.34",
+    "compound_aware_wer_percent": "23.2",
+    "reference_words": "250",
+    "hypothesis_words": "248"
+  },
+  {
+    "system_id": "openai-whisper-medium-generic",
+    "set": "B",
+    "wer_percent": "26.76",
+    "cer_percent": "3.52",
+    "compound_aware_wer_percent": "20.74",
+    "reference_words": "299",
+    "hypothesis_words": "307"
+  },
+  {
+    "system_id": "openai-whisper-medium-generic",
+    "set": "C",
+    "wer_percent": "29.11",
+    "cer_percent": "4.0",
+    "compound_aware_wer_percent": "24.05",
+    "reference_words": "316",
+    "hypothesis_words": "317"
+  },
+  {
+    "system_id": "openai-whisper-medium-generic",
+    "set": "D",
+    "wer_percent": "38.17",
+    "cer_percent": "5.73",
+    "compound_aware_wer_percent": "29.59",
+    "reference_words": "338",
+    "hypothesis_words": "355"
+  },
+  {
+    "system_id": "openai-whisper-medium-generic",
+    "set": "E",
+    "wer_percent": "26.97",
+    "cer_percent": "9.64",
+    "compound_aware_wer_percent": "24.48",
+    "reference_words": "241",
+    "hypothesis_words": "245"
+  },
+  {
+    "system_id": "rust-zipformer-large",
+    "set": "A",
+    "wer_percent": "8.4",
+    "cer_percent": "0.92",
+    "compound_aware_wer_percent": "6.0",
+    "reference_words": "250",
+    "hypothesis_words": "258"
+  },
+  {
+    "system_id": "rust-zipformer-large",
+    "set": "B",
+    "wer_percent": "9.03",
+    "cer_percent": "2.22",
+    "compound_aware_wer_percent": "5.69",
+    "reference_words": "299",
+    "hypothesis_words": "299"
+  },
+  {
+    "system_id": "rust-zipformer-large",
+    "set": "C",
+    "wer_percent": "6.96",
+    "cer_percent": "0.96",
+    "compound_aware_wer_percent": "3.16",
+    "reference_words": "316",
+    "hypothesis_words": "318"
+  },
+  {
+    "system_id": "rust-zipformer-large",
+    "set": "D",
+    "wer_percent": "17.75",
+    "cer_percent": "4.79",
+    "compound_aware_wer_percent": "11.54",
+    "reference_words": "338",
+    "hypothesis_words": "338"
+  },
+  {
+    "system_id": "rust-zipformer-large",
+    "set": "E",
+    "wer_percent": "11.2",
+    "cer_percent": "7.79",
+    "compound_aware_wer_percent": "11.2",
+    "reference_words": "241",
+    "hypothesis_words": "250"
+  },
+  {
+    "system_id": "rust-zipformer-small",
+    "set": "A",
+    "wer_percent": "8.4",
+    "cer_percent": "0.63",
+    "compound_aware_wer_percent": "5.2",
+    "reference_words": "250",
+    "hypothesis_words": "252"
+  },
+  {
+    "system_id": "rust-zipformer-small",
+    "set": "B",
+    "wer_percent": "9.03",
+    "cer_percent": "2.17",
+    "compound_aware_wer_percent": "6.35",
+    "reference_words": "299",
+    "hypothesis_words": "297"
+  },
+  {
+    "system_id": "rust-zipformer-small",
+    "set": "C",
+    "wer_percent": "5.7",
+    "cer_percent": "1.09",
+    "compound_aware_wer_percent": "3.8",
+    "reference_words": "316",
+    "hypothesis_words": "319"
+  },
+  {
+    "system_id": "rust-zipformer-small",
+    "set": "D",
+    "wer_percent": "17.46",
+    "cer_percent": "6.73",
+    "compound_aware_wer_percent": "13.31",
+    "reference_words": "338",
+    "hypothesis_words": "326"
+  },
+  {
+    "system_id": "rust-zipformer-small",
+    "set": "E",
+    "wer_percent": "12.45",
+    "cer_percent": "7.94",
+    "compound_aware_wer_percent": "12.45",
+    "reference_words": "241",
+    "hypothesis_words": "252"
+  },
+  {
+    "system_id": "whisper-verbatim-2604",
+    "set": "A",
+    "wer_percent": "5.2",
+    "cer_percent": "0.63",
+    "compound_aware_wer_percent": "2.8",
+    "reference_words": "250",
+    "hypothesis_words": "251"
+  },
+  {
+    "system_id": "whisper-verbatim-2604",
+    "set": "B",
+    "wer_percent": "6.02",
+    "cer_percent": "0.68",
+    "compound_aware_wer_percent": "2.68",
+    "reference_words": "299",
+    "hypothesis_words": "300"
+  },
+  {
+    "system_id": "whisper-verbatim-2604",
+    "set": "C",
+    "wer_percent": "4.43",
+    "cer_percent": "1.55",
+    "compound_aware_wer_percent": "3.8",
+    "reference_words": "316",
+    "hypothesis_words": "317"
+  },
+  {
+    "system_id": "whisper-verbatim-2604",
+    "set": "D",
+    "wer_percent": "9.76",
+    "cer_percent": "2.75",
+    "compound_aware_wer_percent": "5.92",
+    "reference_words": "338",
+    "hypothesis_words": "341"
+  },
+  {
+    "system_id": "whisper-verbatim-2604",
+    "set": "E",
+    "wer_percent": "11.62",
+    "cer_percent": "7.57",
+    "compound_aware_wer_percent": "11.62",
+    "reference_words": "241",
+    "hypothesis_words": "249"
+  },
+  {
+    "system_id": "whisper-large-v3",
+    "set": "A",
+    "wer_percent": "16.4",
+    "cer_percent": "2.76",
+    "compound_aware_wer_percent": "14.0",
+    "reference_words": "250",
+    "hypothesis_words": "255"
+  },
+  {
+    "system_id": "whisper-large-v3",
+    "set": "B",
+    "wer_percent": "26.42",
+    "cer_percent": "16.65",
+    "compound_aware_wer_percent": "23.41",
+    "reference_words": "299",
+    "hypothesis_words": "343"
+  },
+  {
+    "system_id": "whisper-large-v3",
+    "set": "C",
+    "wer_percent": "22.47",
+    "cer_percent": "5.78",
+    "compound_aware_wer_percent": "15.51",
+    "reference_words": "316",
+    "hypothesis_words": "325"
+  },
+  {
+    "system_id": "whisper-large-v3",
+    "set": "D",
+    "wer_percent": "22.49",
+    "cer_percent": "5.55",
+    "compound_aware_wer_percent": "16.86",
+    "reference_words": "338",
+    "hypothesis_words": "355"
+  },
+  {
+    "system_id": "whisper-large-v3",
+    "set": "E",
+    "wer_percent": "29.46",
+    "cer_percent": "15.06",
+    "compound_aware_wer_percent": "24.9",
+    "reference_words": "241",
+    "hypothesis_words": "266"
+  },
+  {
+    "system_id": "omnilingual-asr-ctc-300m",
+    "set": "A",
+    "wer_percent": "26.8",
+    "cer_percent": "2.53",
+    "compound_aware_wer_percent": "18.4",
+    "reference_words": "250",
+    "hypothesis_words": "248"
+  },
+  {
+    "system_id": "omnilingual-asr-ctc-300m",
+    "set": "B",
+    "wer_percent": "26.09",
+    "cer_percent": "3.28",
+    "compound_aware_wer_percent": "14.72",
+    "reference_words": "299",
+    "hypothesis_words": "287"
+  },
+  {
+    "system_id": "omnilingual-asr-ctc-300m",
+    "set": "C",
+    "wer_percent": "31.01",
+    "cer_percent": "2.87",
+    "compound_aware_wer_percent": "17.41",
+    "reference_words": "316",
+    "hypothesis_words": "307"
+  },
+  {
+    "system_id": "omnilingual-asr-ctc-300m",
+    "set": "D",
+    "wer_percent": "42.31",
+    "cer_percent": "9.16",
+    "compound_aware_wer_percent": "34.02",
+    "reference_words": "338",
+    "hypothesis_words": "317"
+  },
+  {
+    "system_id": "omnilingual-asr-ctc-300m",
+    "set": "E",
+    "wer_percent": "42.32",
+    "cer_percent": "12.39",
+    "compound_aware_wer_percent": "36.93",
+    "reference_words": "241",
+    "hypothesis_words": "249"
+  }
+]

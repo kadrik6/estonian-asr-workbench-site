@@ -1,0 +1,10 @@
+Okei, ma arvan, et Eesti keelele kohandatud kõneduvastus mudel võib olla natuke parem kui suurem üldine mitmekelne mudel just selle pärast, et ta on õppinud Eesti keele iseharjasusi palju täpsemalt.
+Eesti keel on üsna keeruline. Meil on palju käändeid, sõnalõpud muutuvad ja liitsõnad võivad olla pikad. Lisaks on meil päris palju tehnilisi sõnu ja inglise keeles tulnud termineid, mida kasutatakse Eesti keeles kõnes üsna loomulikulid.
+Kui mudel on treenitud väga paljude keelte peale korraga, siis peab oma võimekust jagama väga erinevate keelte vahel. Ta võib küll Eesti keelt osata, aga mitte nii süga putti.
+Eesti keelele on kohandatud mudel saab rohkem õppida just seda, kuidas Eesti keelsed sõnad kõlevad, kuidas sõnavormid siis muutuvad, millised sõnad tavaliselt ükst esi äralt tulevad.
+Me lägime seda ka oma katses. Üldine Whisper sai kõl kogu salvestuses teksti kätte, aga väga paljud Eesti keelsed sõnad olid valesti kuuldud või muutusid täiesti aru saamatud tekstsõna tekst.
+Aaltekin mudel tundis samu lauseid palju paremini ära ja tekst oli päris palju luetama.
+Meega suurem mudel ei ole alati automaatselt panem, kui ülesan on väga konkreetne teistikeelse kõne tuvastamine, siis spetsialiseeritud mudel võib olla väiksem, aga ikkagi täpsem.
+Mina mõtleks sellest nii, et üldine mudel on nagu inimene, kes oskap natuke väga palju siit keeli.
+Eesti keelele kohandatud mudel on nagu inimene, kes tunneb just Eesti keelt palju pohjalikumalt ja kõletuvartuse puhul võib see vahe olla päris suur.
+Test mudel ei pea ainult teelest aru saama, vaid teab ka kõigepealt helist õiget sõnadela tundma.

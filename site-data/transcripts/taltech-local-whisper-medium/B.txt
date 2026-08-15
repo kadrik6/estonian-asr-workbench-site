@@ -1,0 +1,18 @@
+Andmebaas on korrastatud andmekogum, mida saab süstemaatiliselt salvestada, otsida ja muuta.
+Relatsioonilises andmebaasis hoitakse andmeid tavaliselt tabelites. Tabel koosneb ridadest ja veergudest ning iga veerg kirjeldab mingit atribuuti.
+Primaarvuti identifitseerib tabelis ühe kirja unikaalselt. Välisvõti võimaldab luua seose kahe tabeli vahel. Näiteks võib tellimuste tabel sisaldada kliendi identifikaatorit, mis viitab klientide tabeli primaarvõtmele.
+Andmete normaliseerimise eesmärk on vähendada tarbetut dubleerimist ja vältida olukordi, kus sama fakti tuleb muuta mitmes kohas. Halb andmemudel võib põhjustada vastuolulisi andmeid isegi siis, kui rakenduse programmi kood töötab tehniliselt õigesti.
+SQL on keel, mida kasutatakse relatsiooniliste andmebaasidega suhtlemiseks. Sellekt päringuga saab andmeid lugeda, insert käsuga uusi ridu lisada, update käsuga olemasolevaid väärtusi muuta ja delete käsuga ridu kustutada.
+Võimaldab ühendada omavahel seotud tabelite andmeid.
+Tagastab read, millele leidub vaste mõlemas tabelis.
+Säilitab ka vasakpoolset tabeli read, millele teises tabelis vastet ei leidu.
+Indeks võib muuta päringu oluliselt kiiremaks, sest andmebaas ei pea alati kogu tabelit järjest läbi vaatama.
+Samal ajal ei ole indeks tasuta. Indeksite hoidmine võtab ruumi ning andmete lisamisel ja muutmisel tuleb uuendada ka indeksid.
+Programmeerimises on muutuja nimi, mille kaudu programm pääseb ligi mingile väärtusele.
+Funktsioon koondab kokku tegevused, mida saab vajadusel korduvalt käivitada. Tingimuslause võimaldab programmil valida erinevate tegevuste vahel ja tsükkel võimaldab sama tegevust mitu korda korrata.
+Pythonis võib funktsioon võtta vastu parameetreid ja tagastada tulemuse.
+Objektorienteeritud programmeerimises kirjeldab klass objektide struktuuri ja käitumist. Objekt on konkreetne klassi põhjal loodud eksemplar. Github on versiooni haldussüsteem.
+Komit salvestab projektimuudatuste seisu ning võimaldab teha arendust eraldi harus.
+Ühendab erinevate harude muudatused. Konflikt tekib siis, kui github ei suuda automaatselt otsustada, kuidas kaks erinevat muudatust kokku ühendada.
+Docker võimaldab pakkida rakenduse koos selle käivitamiseks vajalike sõltuvustega konteinerisse.
+Konteiner ei ole sama, mis virtuaalmasin. Konteinerid jagavad host'i operatsioonisüsteemi Kernelid. Mistõttu on nad tavaliselt kergemad ja käivituvad kiiremini.

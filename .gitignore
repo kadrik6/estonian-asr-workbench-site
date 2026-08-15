@@ -1,0 +1,9 @@
+# No build step in this repo (plain static HTML/CSS/JS), so there's normally
+# nothing generated to ignore. These cover incidental local/editor cruft only
+# -- site-data/ is intentionally NOT ignored here: it's vendored, versioned
+# content this repo is supposed to commit (see README.md).
+
+.DS_Store
+.vscode/
+*.swp
+node_modules/

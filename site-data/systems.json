@@ -1,0 +1,374 @@
+[
+  {
+    "system_id": "microsoft-word-transcribe",
+    "display_name": "Microsoft 365 Word Transcribe",
+    "status": "benchmarked",
+    "category": "commercial-cloud",
+    "architecture_family": "unknown (proprietary)",
+    "streaming": null,
+    "estonian_tuned": null,
+    "deployment": "cloud",
+    "hardware": {
+      "raw": null,
+      "gpu": false,
+      "cpu": false
+    },
+    "reproducible_by_user": "no",
+    "has_own_runs": false,
+    "headline": {
+      "wer_percent": 14.46,
+      "cer_percent": 3.17,
+      "compound_aware_wer_percent": 10.47
+    },
+    "not_benchmarked_reason": null,
+    "provider": "Microsoft",
+    "source": {
+      "description": "Microsoft 365 Word's Transcribe feature (upload workflow, not a live Teams call)"
+    },
+    "known_limitations": null,
+    "known_unknowns": "Exact model/version not published or recorded at test time. Not the same as MAI-Transcribe-1.5 (newer, separate product) -- do not conflate.",
+    "language_support": {
+      "estonian": true,
+      "other_languages": null,
+      "estonian_specific_training": null
+    }
+  },
+  {
+    "system_id": "omnilingual-asr-ctc-300m",
+    "display_name": "Meta Omnilingual ASR CTC-300M (via sherpa-onnx ONNX export)",
+    "status": "benchmarked",
+    "category": "general-multilingual-open",
+    "architecture_family": "wav2vec2 self-supervised encoder + CTC head (non-autoregressive)",
+    "streaming": false,
+    "estonian_tuned": false,
+    "deployment": "local",
+    "hardware": {
+      "raw": "CPU (Intel Core Ultra 7 255HX, single thread) -- no GPU used, none required",
+      "gpu": false,
+      "cpu": true
+    },
+    "reproducible_by_user": "yes",
+    "has_own_runs": true,
+    "headline": {
+      "wer_percent": 32.09,
+      "cer_percent": 4.6,
+      "compound_aware_wer_percent": 21.61
+    },
+    "not_benchmarked_reason": null,
+    "provider": "Meta (model), via a sherpa-onnx ONNX export -- not Meta's own runtime",
+    "source": {
+      "model_identity": "confirmed",
+      "model": "This is a sherpa-onnx ONNX export of Meta's facebook/omniASR-CTC-300M, not the original Meta/fairseq2 runtime implementation.",
+      "hf_repo": "csukuangfj/sherpa-onnx-omnilingual-asr-1600-languages-300M-ctc-2025-11-12",
+      "hf_revision_commit": "98ab94b2a45a0d13f852c80ae77c52766ac1ea25",
+      "model_onnx_sha256": "25f6faecf3f541626e6d3b793103d9544c2f52b0f4f40373b4e2720ac3ff77d5",
+      "model_onnx_sha256_verified": true,
+      "license": "Apache-2.0"
+    },
+    "known_limitations": "Confirmed architectural input-length limitation: degrades sharply past ~40s of continuous audio (Meta's own documentation, independently verified by direct testing at 10s/35s/60s/177s before running the benchmark). Required segmentation for this benchmark's 139-233s recordings -- a fixed chunking approach decided before running, not tuned afterward. No language-conditioning input exists for this model type (confirmed via official API signature) -- decoding is purely acoustic. Frequently omits word-boundary spaces within a single chunk's own output (a model/tokenization characteristic, confirmed NOT a stitching artifact by inspecting raw per-chunk output) -- inflates strict WER substantially more than CER or compound-aware WER, which forgive pure spacing differences.",
+    "known_unknowns": null,
+    "language_support": {
+      "estonian": true,
+      "estonian_language_id": "ekk_Latn",
+      "other_languages": "1,600+ languages",
+      "estonian_specific_training": false
+    }
+  },
+  {
+    "system_id": "openai-whisper-medium-generic",
+    "display_name": "OpenAI Whisper medium (generic, unmodified checkpoint)",
+    "status": "benchmarked",
+    "category": "general-multilingual-open",
+    "architecture_family": "Whisper-medium (encoder-decoder, attention)",
+    "streaming": false,
+    "estonian_tuned": false,
+    "deployment": "local",
+    "hardware": {
+      "raw": "GPU (--device cuda); exact GPU model not recorded",
+      "gpu": true,
+      "cpu": false
+    },
+    "reproducible_by_user": "yes",
+    "has_own_runs": false,
+    "headline": {
+      "wer_percent": 31.34,
+      "cer_percent": 4.63,
+      "compound_aware_wer_percent": 24.61
+    },
+    "not_benchmarked_reason": null,
+    "provider": "OpenAI",
+    "source": {
+      "model_identity": "confirmed",
+      "model": "OpenAI Whisper medium -- generic, unmodified OpenAI checkpoint. Confirmed NOT TalTechNLP/whisper-medium-et.",
+      "code_source": "PyPI package `openai-whisper` (official OpenAI package, homepage github.com/openai/whisper), installed via `pip install -U openai-whisper`.",
+      "checkpoint_source": "OpenAI's official Whisper model registry -- the URL hardcoded in the openai-whisper package's own `_MODELS` dict for the \"medium\" alias, fetched automatically at run time (https://openaipublic.azureedge.net/main/whisper/models/345ae4da.../medium.pt). Not Hugging Face, not GitHub.",
+      "historical_invocation": "whisper <audio_file> --language et --model medium --device cuda --output_format all --verbose False --output_dir .\\benchmark\\whisper",
+      "checkpoint_sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1",
+      "checkpoint_sha256_note": "Exact match to the hash embedded in OpenAI's own published medium.pt download URL (openai-whisper package's _MODELS registry) -- confirmed by directly computing sha256sum of the locally cached checkpoint file, not inferred from filename or convention.",
+      "huggingface_cache_check": "No Hugging Face cache entry for any Whisper model, generic or TalTechNLP, was present on the machine that ran this benchmark -- rules out a Hugging-Face-sourced checkpoint.",
+      "evidence_basis": "PowerShell command history (literal invocation recovered), pip package installation metadata (INSTALLER=pip, package METADATA), and a direct SHA256 hash match against the locally cached checkpoint file. Full evidence trail recorded in project history; classified CONFIRMED, not inferred from naming."
+    },
+    "known_limitations": null,
+    "known_unknowns": "Decode used openai-whisper's own default beam-search/temperature-fallback behavior -- no --temperature or --beam_size override was passed in the recorded invocation, so defaults apply. No other material unknowns: model identity is confirmed (see source above), not TalTechNLP/whisper-medium-et.",
+    "language_support": {
+      "estonian": true,
+      "other_languages": "99 languages (Whisper's standard set)",
+      "estonian_specific_training": false
+    }
+  },
+  {
+    "system_id": "rust-zipformer-large",
+    "display_name": "Streaming Zipformer (large, et-en)",
+    "status": "benchmarked",
+    "category": "estonian-specialized-local",
+    "architecture_family": "Icefall Zipformer transducer",
+    "streaming": true,
+    "estonian_tuned": true,
+    "deployment": "local",
+    "hardware": {
+      "raw": "CPU",
+      "gpu": false,
+      "cpu": true
+    },
+    "reproducible_by_user": "yes",
+    "has_own_runs": true,
+    "headline": {
+      "wer_percent": 10.81,
+      "cer_percent": 2.3,
+      "compound_aware_wer_percent": 6.73
+    },
+    "not_benchmarked_reason": null,
+    "provider": "TalTechNLP (Tallinn University of Technology)",
+    "source": {
+      "hf_repo": "TalTechNLP/streaming-zipformer-large.et-en",
+      "hf_commit_at_investigation": "15f629e9a4124c98eb3a1000cabaeec2dec59b35 (initial) / current repo HEAD 2812262 (README-only update, weights unchanged since initial upload)",
+      "encoder_sha256": "0fd33e9c3762bd98252a022f7a19a0280c7cedaaf7fe9346d1ac351751c225c5"
+    },
+    "known_limitations": null,
+    "known_unknowns": null,
+    "language_support": {
+      "estonian": true,
+      "other_languages": [
+        "en"
+      ],
+      "estonian_specific_training": true
+    }
+  },
+  {
+    "system_id": "rust-zipformer-small",
+    "display_name": "Streaming Zipformer (small, et-en)",
+    "status": "benchmarked",
+    "category": "estonian-specialized-local",
+    "architecture_family": "Icefall Zipformer transducer",
+    "streaming": true,
+    "estonian_tuned": true,
+    "deployment": "local",
+    "hardware": {
+      "raw": "CPU",
+      "gpu": false,
+      "cpu": true
+    },
+    "reproducible_by_user": "yes",
+    "has_own_runs": true,
+    "headline": {
+      "wer_percent": 10.39,
+      "cer_percent": 2.78,
+      "compound_aware_wer_percent": 7.4
+    },
+    "not_benchmarked_reason": null,
+    "provider": "TalTechNLP (Tallinn University of Technology)",
+    "source": {
+      "hf_repo": "TalTechNLP/streaming-zipformer.et-en",
+      "hf_commit": "7edbacc1d13a4bc8fba21307753569e8334938a0",
+      "notes_on_relationship_to_large": "tokens.txt (vocabulary) verified byte-identical to the large model; decoder.onnx/joiner.onnx are the same file size but verified NOT byte-identical (independently trained, not shared weights); encoder.onnx is ~44% the size of the large model's."
+    },
+    "known_limitations": null,
+    "known_unknowns": null,
+    "language_support": {
+      "estonian": true,
+      "other_languages": [
+        "en"
+      ],
+      "estonian_specific_training": true
+    }
+  },
+  {
+    "system_id": "taltech-local-whisper-medium",
+    "display_name": "TalTech-local Whisper-medium pipeline (est-asr-pipeline, frozen)",
+    "status": "benchmarked",
+    "category": "estonian-specialized-local",
+    "architecture_family": "Whisper-medium fine-tune + Kaldi alignment (est-asr-pipeline, transcribe-whisper-gpu.nf)",
+    "streaming": false,
+    "estonian_tuned": true,
+    "deployment": "local",
+    "hardware": {
+      "raw": "GPU (RTX 5070) for Whisper decode, CPU for Kaldi alignment",
+      "gpu": true,
+      "cpu": true
+    },
+    "reproducible_by_user": "partially",
+    "has_own_runs": false,
+    "headline": {
+      "wer_percent": 9.64,
+      "cer_percent": 1.95,
+      "compound_aware_wer_percent": 5.82
+    },
+    "not_benchmarked_reason": null,
+    "provider": "TalTechNLP (Tallinn University of Technology)",
+    "source": {
+      "hf_repo_likely_origin": "TalTechNLP/whisper-medium-et (NOT CONFIRMED -- see known_unknowns; do not treat as verified)",
+      "local_pipeline_commit": "2151df14b2c796e19f12d1662c58c2036049f3a1 (est-asr-pipeline HEAD, plus an uncommitted working-tree diff (preserved internally, not published))"
+    },
+    "known_limitations": null,
+    "known_unknowns": "UNRESOLVED: the exact upstream/public provenance of the 'whisper-medium-et-v5-ct2' checkpoint baked into TalTech's est-asr-pipeline Docker image is not established from any local evidence -- it is not obtained via any visible download/build command in local history, only present inside a pre-built Docker image pulled from TalTech's own registry (not independently accessible outside TalTech's own infrastructure). Do NOT claim it is identical to the public TalTechNLP/whisper-medium-et Hugging Face model unless independently verified (e.g. by hashing the checkpoint file inside the Docker image and comparing) -- the 'v5' naming suggests a possibly further-iterated internal checkpoint, not necessarily what's published on HF. CONFIRMED DIFFERENT from the generic OpenAI Whisper medium checkpoint used by openai-whisper-medium-generic: separate pipeline (Docker/Linux vs. Windows Python venv), separate environment, and definitively not the same weights (see that system's source.checkpoint_sha256 -- OpenAI's stock checkpoint has a different, confirmed hash). Separately: known run-to-run variance in the GPU Whisper decode step -- the frozen 9.64% number is a single historical run, not yet characterized for variance itself.",
+    "language_support": {
+      "estonian": true,
+      "other_languages": [],
+      "estonian_specific_training": true
+    }
+  },
+  {
+    "system_id": "tekstiks-ee",
+    "display_name": "tekstiks.ee (public production service)",
+    "status": "benchmarked",
+    "category": "commercial-cloud",
+    "architecture_family": "unknown (proprietary)",
+    "streaming": null,
+    "estonian_tuned": null,
+    "deployment": "cloud",
+    "hardware": {
+      "raw": null,
+      "gpu": false,
+      "cpu": false
+    },
+    "reproducible_by_user": "no",
+    "has_own_runs": false,
+    "headline": {
+      "wer_percent": 6.07,
+      "cer_percent": 1.08,
+      "compound_aware_wer_percent": 2.99
+    },
+    "not_benchmarked_reason": null,
+    "provider": "tekstiks.ee (public production service; not TalTechNLP or any other party by confirmed relationship)",
+    "source": {
+      "description": "Public tekstiks.ee web transcription output, historical benchmark run"
+    },
+    "known_limitations": null,
+    "known_unknowns": "Exact model/architecture/config not published. Not proven to be the same as any TalTechNLP HF model or this repo's Rust server, despite likely lineage",
+    "language_support": {
+      "estonian": true,
+      "other_languages": null,
+      "estonian_specific_training": null
+    }
+  },
+  {
+    "system_id": "whisper-large-v3",
+    "display_name": "OpenAI Whisper large-v3 (generic, unmodified checkpoint)",
+    "status": "benchmarked",
+    "category": "general-multilingual-open",
+    "architecture_family": "Whisper large-v3, full (non-turbo): 32 encoder layers, 32 decoder layers",
+    "streaming": false,
+    "estonian_tuned": false,
+    "deployment": "local",
+    "hardware": {
+      "raw": "GPU (RTX 5070)",
+      "gpu": true,
+      "cpu": false
+    },
+    "reproducible_by_user": "yes",
+    "has_own_runs": true,
+    "headline": {
+      "wer_percent": 22.19,
+      "cer_percent": 7.82,
+      "compound_aware_wer_percent": 17.54
+    },
+    "not_benchmarked_reason": null,
+    "provider": "OpenAI (checkpoint), via Systran's CTranslate2 conversion",
+    "source": {
+      "model_identity": "confirmed",
+      "model": "OpenAI Whisper large-v3 -- generic, unmodified OpenAI checkpoint, NOT a TalTech fine-tune.",
+      "hf_repo": "Systran/faster-whisper-large-v3",
+      "hf_revision_commit": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+      "checkpoint_source": "Systran's CTranslate2 conversion of openai/whisper-large-v3 (model card documents the exact ct2-transformers-converter command; MIT licensed; deterministic format conversion, no retraining).",
+      "checkpoint_sha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+      "checkpoint_sha256_verified": true
+    },
+    "known_limitations": "Untuned generic large-v3 shows genuine repetition-loop hallucination on this benchmark (verbatim multi-sentence repeats observed in Set B, e.g. one sentence repeated 3-4 times), a known general Whisper failure mode, more visible here likely because VAD filtering is off (the untuned default) and the model has no Estonian-specific tuning to anchor confident decoding. This was observed, not fixed -- per instruction, no decoding parameters were tuned after seeing the result.",
+    "known_unknowns": null,
+    "language_support": {
+      "estonian": true,
+      "other_languages": "99 languages (Whisper standard set)",
+      "estonian_specific_training": false
+    }
+  },
+  {
+    "system_id": "whisper-verbatim-2604",
+    "display_name": "Whisper large-v3-turbo, Estonian verbatim fine-tune (2604)",
+    "status": "benchmarked",
+    "category": "estonian-specialized-local",
+    "architecture_family": "Whisper large-v3-turbo (32 encoder layers, 4 decoder layers, d_model=1280)",
+    "streaming": false,
+    "estonian_tuned": true,
+    "deployment": "local",
+    "hardware": {
+      "raw": "GPU (RTX 5070)",
+      "gpu": true,
+      "cpu": false
+    },
+    "reproducible_by_user": "yes",
+    "has_own_runs": true,
+    "headline": {
+      "wer_percent": 6.48,
+      "cer_percent": 1.46,
+      "compound_aware_wer_percent": 3.91
+    },
+    "not_benchmarked_reason": null,
+    "provider": "TalTechNLP (Tallinn University of Technology)",
+    "source": {
+      "hf_repo": "TalTechNLP/whisper-large-v3-turbo-et-verbatim-2604",
+      "hf_commit": "310c550922fc1d1bebf3fad41f9b33ede6652bdc",
+      "model_bin_sha256": "e3ebce23a10322e1401e4cafd4e6675811988c0890aff1885469b357a27388da"
+    },
+    "known_limitations": null,
+    "known_unknowns": null,
+    "language_support": {
+      "estonian": true,
+      "other_languages": [],
+      "estonian_specific_training": true
+    }
+  },
+  {
+    "system_id": "mai-transcribe-1.5",
+    "display_name": "Microsoft MAI-Transcribe-1.5",
+    "status": "planned",
+    "category": "commercial-cloud",
+    "architecture_family": "unknown (proprietary)",
+    "streaming": null,
+    "estonian_tuned": null,
+    "deployment": "cloud",
+    "hardware": {
+      "raw": null,
+      "gpu": false,
+      "cpu": false
+    },
+    "reproducible_by_user": "not_run",
+    "has_own_runs": false,
+    "headline": null,
+    "not_benchmarked_reason": "paid API / no zero-cost access",
+    "provider": "Microsoft",
+    "source": {
+      "vendor": "Microsoft",
+      "product": "MAI-Transcribe-1.5",
+      "api_surface": "LLM Speech API (speechtotext/transcriptions:transcribe, enhancedMode.model=mai-transcribe-1.5), public preview",
+      "docs": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/mai-transcribe, https://learn.microsoft.com/en-us/azure/ai-services/speech-service/llm-speech"
+    },
+    "known_limitations": "Not yet benchmarked. Confirmed (per official Microsoft documentation): no diarization, no prompt-tuning, and only mai-transcribe-1.5 (not -1) supports phraseList/transcribeStyle. Public preview status -- no SLA, and Microsoft's generic AI-preview terms permit storing/reviewing submitted data for abuse monitoring.",
+    "known_unknowns": null,
+    "language_support": {
+      "estonian": true,
+      "estonian_language_code": "et",
+      "other_languages": "47 languages (mai-transcribe-1.5; mai-transcribe-1, deprecated 2026-08-20, supported ~27 and did not include Estonian)",
+      "estonian_specific_training": null
+    }
+  }
+]
