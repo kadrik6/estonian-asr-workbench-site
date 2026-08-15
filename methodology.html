@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="et">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.lang = localStorage.getItem("wb_lang") || "et";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Methodology — Estonian ASR Workbench</title>
 <link rel="stylesheet" href="css/style.css">
@@ -11,106 +12,73 @@
 
 <main class="wrap">
   <div class="page-head">
-    <h1>Methodology</h1>
-    <p>How the numbers on this site were actually produced — in plain language
-    first, with full technical detail further down for anyone who wants it.</p>
+    <h1 id="page-h1"></h1>
+    <p id="page-intro"></p>
   </div>
 
   <section class="summary-box">
-    <h2>In short</h2>
-    <ul class="plain-list">
-      <li>Every system transcribes the same <strong>five Estonian recordings</strong> (called Sets A–E). Four of them (A–D) are read from a fixed script and get pooled into one headline score; the fifth (E) is looser, more natural speech, and is kept separate because it isn't fair to score the same way.</li>
-      <li>Each system's transcript is compared word-by-word against the original script. The main score is <strong>Word Error Rate (WER)</strong> — roughly, the percentage of words a system got wrong. Lower is better.</li>
-      <li>Two extra scores are reported alongside WER for more nuance: <strong>Character Error Rate (CER)</strong> and <strong>compound-aware WER</strong>, which specifically ignores one narrow kind of non-error common in Estonian — see below.</li>
-      <li>Before comparing, all text is lowercased and stripped of punctuation. That's why the <a href="transcripts.html">Transcripts</a> page shows plain lowercase text — it's showing you exactly what was actually scored, not a prettied-up version.</li>
-      <li>This site currently shows which hardware each system ran on (CPU/GPU/local/cloud) but not speed numbers themselves — a CPU figure, a GPU figure, and a cloud-service figure wouldn't be directly comparable to each other anyway. See below for why.</li>
-    </ul>
+    <h2 id="summary-heading"></h2>
+    <ul class="plain-list" id="summary-list"></ul>
   </section>
 
-  <nav class="method-toc" aria-label="Sections">
-    <a href="#sets">The five sets</a>
-    <a href="#reference">Reference transcripts</a>
-    <a href="#wer">Strict WER</a>
-    <a href="#cer">CER</a>
-    <a href="#compound">Compound-aware WER</a>
-    <a href="#normalization">Normalization</a>
-    <a href="#normalized-display">Why Transcripts shows normalized text</a>
-    <a href="#speed">Why speed isn't comparable</a>
-    <a href="#limitations">Limitations</a>
-    <a href="#reproducibility">Reproducibility categories</a>
-  </nav>
+  <nav class="method-toc" id="method-toc"></nav>
 
   <section class="method-section" id="sets">
-    <h2>The five benchmark sets, and why A–D are pooled while E is secondary</h2>
-    <p>Every system transcribes the same five fixed Estonian recordings, one speaker, mostly technical/educational subject matter (computing, databases, mathematics). Sets A–D are read aloud from a prepared script, word for word, so there's an exact ground truth to check against. Set E is looser and more freely spoken.</p>
-    <p>That difference matters for scoring: if a speaker naturally rephrases, repeats, or adds a word while reading, comparing against the fixed script would count that as an "error" even though the system transcribed the audio correctly. So Set E is reported, but kept out of the headline number and treated as secondary/qualitative rather than pooled in.</p>
+    <h2></h2>
+    <div class="p-slot"></div>
     <div id="sets-table"></div>
   </section>
 
   <section class="method-section" id="reference">
-    <h2>Reference transcripts</h2>
-    <p>The "reference" is the original written script for each set — the ground truth every system's output is measured against. It's shown pinned at the top of the <a href="transcripts.html">Transcripts</a> page specifically so it's never ambiguous which text is the answer and which are the attempts.</p>
+    <h2></h2>
+    <div class="p-slot"></div>
   </section>
 
   <section class="method-section" id="wer">
-    <h2>Strict Word Error Rate (WER) — the primary metric</h2>
-    <p>WER counts how many words a system's transcript got wrong, as a percentage of the reference's word count: words substituted for a different word, words dropped entirely, and extra words inserted that weren't said. It's the single number this benchmark treats as primary — the one used to sort <a href="compare.html">Compare</a> by default.</p>
-    <p>It's a strict, literal count: a correctly-heard word written in an unexpected but plausible form still counts as wrong. No credit for "close enough."</p>
+    <h2></h2>
+    <div class="p-slot"></div>
   </section>
 
   <section class="method-section" id="cer">
-    <h2>Character Error Rate (CER)</h2>
-    <p>CER measures the same idea at the character level instead of the word level — how many individual characters had to change, as a percentage of the reference's character count. It's reported as a secondary metric because it tells a different story than WER: a system that mishears "andmebaas" as "andmebaaas" gets the whole word marked wrong under WER, but CER shows that error was actually tiny — one extra letter, not a completely different word.</p>
+    <h2></h2>
+    <div class="p-slot"></div>
   </section>
 
   <section class="method-section" id="compound">
-    <h2>Compound-aware WER — what it forgives, precisely</h2>
-    <p>Estonian builds long compound words freely (e.g. <em>andmebaas</em>, "database"). A system sometimes writes a compound as two separate words, or joins two words a script kept separate. Strict WER counts that as a real error, same as a completely wrong word — which arguably overstates the mistake.</p>
-    <p>Compound-aware WER is a secondary score that forgives <strong>only</strong> this one narrow case: when a group of words on one side, joined together with no spaces, is character-for-character identical to a single word on the other side. For example, Meta's Omnilingual ASR system transcribed "andmete visuaalne" as one word, <code>andmetevisuaalne</code> — spelled exactly the same once you remove the space, so compound-aware WER doesn't count it as an error. Genuinely wrong words are never forgiven this way: a misheard word like "primaarvõti" transcribed as "primaarvuti" still counts as an error under both metrics, because those aren't character-identical.</p>
-    <p>Compound-aware WER can never be higher than strict WER for the same transcript — it only ever forgives, never adds errors — so it's always reported alongside strict WER, never as a replacement for it.</p>
+    <h2></h2>
+    <div class="p-slot"></div>
   </section>
 
   <section class="method-section" id="normalization">
-    <h2>Normalization</h2>
-    <p>Before any comparison happens, both the reference and every system's transcript go through the same fixed cleanup: Unicode is standardized, text is lowercased, punctuation and symbols are stripped out, and whitespace is collapsed. This happens identically for every system, using one shared implementation — so results can't silently diverge because two systems' text was cleaned up differently.</p>
-    <p>Separately, system-specific artifacts that aren't actually transcript content — speaker labels, timestamps, document headers some tools insert — are stripped once per system before scoring, since those aren't something any ASR system should be "graded" on getting wrong.</p>
+    <h2></h2>
+    <div class="p-slot"></div>
   </section>
 
   <section class="method-section" id="normalized-display">
-    <h2>Why the Transcripts page shows normalized text</h2>
-    <p>The word-by-word highlighting on the <a href="transcripts.html">Transcripts</a> page is built directly from the same alignment used to compute the scores — nothing is recomputed for display. That alignment operates on normalized (lowercase, no punctuation) text, so showing anything else would mean the highlighted text doesn't actually match what's behind the highlighting. It's a deliberate choice for exactness over prettiness: what you see there is provably what was scored, not a reconstruction of it.</p>
+    <h2></h2>
+    <div class="p-slot"></div>
   </section>
 
   <section class="method-section" id="speed">
-    <h2>Why speed numbers aren't directly comparable across systems</h2>
-    <p>Some systems in this benchmark run on a CPU, some on a GPU, and some are cloud services running on hardware this project has no visibility into at all. A "real-time factor" measured on a single CPU thread and one measured on a GPU are answering different questions, not the same question on different hardware — and a cloud API's reported time includes network and queueing behavior a local run never has to deal with. This site doesn't currently display per-system speed numbers on any page — only the hardware category (CPU/GPU/local/cloud) shown on <a href="compare.html">Compare</a> and <a href="systems.html">Systems</a>. The Workbench's own results do record timing per run, but always alongside that run's specific hardware, precisely so a bare number is never read as comparable across systems without it.</p>
+    <h2></h2>
+    <div class="p-slot"></div>
   </section>
 
   <section class="method-section" id="limitations">
-    <h2>Limitations of this benchmark</h2>
-    <ul class="plain-list">
-      <li><strong>One speaker, one recording environment.</strong> Nothing here speaks to accent, age, gender, background noise, or microphone variation.</li>
-      <li><strong>Small sample.</strong> Five recordings is enough to compare systems meaningfully, not enough to claim a definitive ranking — per-set numbers can be noisy.</li>
-      <li><strong>Mostly read, technical speech.</strong> Results may not transfer to spontaneous conversation or non-technical, everyday Estonian.</li>
-      <li><strong>Proprietary services are black boxes.</strong> For cloud/commercial systems, the exact model, version, and configuration used often isn't published — this benchmark records what's independently verifiable and states plainly what isn't.</li>
-      <li><strong>Point-in-time results.</strong> Cloud services can change without notice; a result here reflects whatever was live when it was tested, not a live, continuously-updated score.</li>
-    </ul>
+    <h2></h2>
+    <ul class="plain-list li-slot"></ul>
   </section>
 
   <section class="method-section" id="reproducibility">
-    <h2>Reproducibility categories</h2>
-    <p>Every system on <a href="compare.html">Compare</a> and <a href="systems.html">Systems</a> is labeled with one of these, based on whether you could rerun it yourself from public information:</p>
-    <ul class="plain-list">
-      <li><strong>Yes</strong> — the model and runtime are public; you could reproduce the run yourself with your own copy of the audio.</li>
-      <li><strong>Partially</strong> — reproducible in principle, but with a known caveat (e.g. an unresolved run-to-run variance in one local pipeline).</li>
-      <li><strong>No</strong> — a proprietary service with no published model or configuration; the result is preserved as evidence from a specific test, not a repeatable recipe.</li>
-      <li><strong>Not run</strong> — documented and planned, but not yet benchmarked (currently only Microsoft MAI-Transcribe-1.5, held back over cost — see its profile on <a href="systems.html">Systems</a>).</li>
-    </ul>
+    <h2></h2>
+    <div class="p-slot"></div>
+    <ul class="plain-list li-slot"></ul>
   </section>
 </main>
 
 <footer class="site-foot" id="site-footer"></footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/data.js"></script>
 <script src="js/methodology.js"></script>
 </body>

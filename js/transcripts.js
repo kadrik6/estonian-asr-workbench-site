@@ -1,5 +1,19 @@
 (async function () {
   renderChrome("transcripts.html");
+  document.title = t("transcripts.title");
+  document.getElementById("page-h1").textContent = t("transcripts.h1");
+  document.getElementById("page-intro").textContent = t("transcripts.intro");
+  document.getElementById("set-label").textContent = t("transcripts.setLabel");
+  document.getElementById("systems-label").textContent = t("transcripts.systemsLabel");
+  document.getElementById("normalize-note").textContent = t("transcripts.normalizeNote");
+  document.getElementById("insight-note").innerHTML = t("transcripts.insight");
+  document.getElementById("cols-label").textContent = t("transcripts.colsLabel");
+  document.getElementById("legend").innerHTML = `
+    <span class="item"><span class="sw" style="background:color-mix(in srgb, var(--sub) 45%, transparent)"></span>${t("transcripts.legend.sub")}</span>
+    <span class="item"><span class="sw" style="background:color-mix(in srgb, var(--del) 35%, transparent)"></span>${t("transcripts.legend.del")}</span>
+    <span class="item"><span class="sw" style="background:color-mix(in srgb, var(--ins) 40%, transparent)"></span>${t("transcripts.legend.ins")}</span>
+    <span class="item"><span class="sw" style="background:color-mix(in srgb, var(--bound) 45%, transparent)"></span>${t("transcripts.legend.bound")}</span>`;
+
   const { manifest, systems, resultsPerSet } = await loadWorkbenchData();
   applyManifestFooter(manifest);
 
@@ -23,9 +37,10 @@
   const setPicker = document.getElementById("set-picker");
   function renderSetPicker() {
     setPicker.innerHTML = manifest.sets
-      .map(
-        (s) => `<button data-set="${s}" aria-pressed="${s === currentSet}" title="Set ${s}${s === "E" ? " — secondary/qualitative" : ""}">${s}</button>`
-      )
+      .map((s) => {
+        const title = t("transcripts.setTitle").replace("${set}", s) + (s === "E" ? t("transcripts.setTitleSecondary") : "");
+        return `<button data-set="${s}" aria-pressed="${s === currentSet}" title="${title}">${s}</button>`;
+      })
       .join("");
     setPicker.querySelectorAll("button").forEach((btn) =>
       btn.addEventListener("click", () => {
@@ -50,11 +65,7 @@
       })
       .join("");
     pickerNote.textContent =
-      selected.size >= MAX_SYS
-        ? "Four is the readable limit — uncheck one to add another."
-        : selected.size <= MIN_SYS
-        ? "Pick at least two systems to compare."
-        : "";
+      selected.size >= MAX_SYS ? t("transcripts.noteMax") : selected.size <= MIN_SYS ? t("transcripts.noteMin") : "";
 
     sysPicker.querySelectorAll("input").forEach((cb) =>
       cb.addEventListener("change", () => {
@@ -84,17 +95,17 @@
     const parts = [];
     for (const op of ops) {
       if (op.op === "correct") {
-        for (const t of op.hyp) parts.push(`<span class="tok">${esc(t)}</span>`);
+        for (const w of op.hyp) parts.push(`<span class="tok">${esc(w)}</span>`);
       } else if (op.op === "substitution") {
-        const refTxt = esc(op.ref.join(" "));
-        for (const t of op.hyp) parts.push(`<span class="tok sub" title="reference: ${refTxt}">${esc(t)}</span>`);
+        const refTxt = t("transcripts.tokRef").replace("${ref}", esc(op.ref.join(" ")));
+        for (const w of op.hyp) parts.push(`<span class="tok sub" title="${refTxt}">${esc(w)}</span>`);
       } else if (op.op === "insertion") {
-        for (const t of op.hyp) parts.push(`<span class="tok ins" title="not in reference">${esc(t)}</span>`);
+        for (const w of op.hyp) parts.push(`<span class="tok ins" title="${t("transcripts.tokNotInRef")}">${esc(w)}</span>`);
       } else if (op.op === "deletion") {
-        for (const t of op.ref) parts.push(`<span class="tok del" title="missing — reference had this">${esc(t)}</span>`);
+        for (const w of op.ref) parts.push(`<span class="tok del" title="${t("transcripts.tokMissing")}">${esc(w)}</span>`);
       } else if (op.op === "boundary") {
-        const refTxt = esc(op.ref.join(" "));
-        for (const t of op.hyp) parts.push(`<span class="tok bound" title="word-boundary difference only — reference: ${refTxt}">${esc(t)}</span>`);
+        const refTxt = t("transcripts.tokBoundary").replace("${ref}", esc(op.ref.join(" ")));
+        for (const w of op.hyp) parts.push(`<span class="tok bound" title="${refTxt}">${esc(w)}</span>`);
       }
     }
     return parts.join(" ");
@@ -113,7 +124,7 @@
 
   async function renderAll() {
     if (selected.size < MIN_SYS) {
-      cols.innerHTML = `<div class="empty-hint">Pick at least two systems above to compare.</div>`;
+      cols.innerHTML = `<div class="empty-hint">${t("transcripts.pickTwo")}</div>`;
       refBlock.innerHTML = "";
       return;
     }
@@ -123,7 +134,8 @@
       ids.map((id) => loadJSON(`${DATA_ROOT}/alignments/${id}/${currentSet}.json`))
     );
 
-    refBlock.innerHTML = `<span class="eyebrow">Reference script — Set ${currentSet}${currentSet === "E" ? " (secondary/qualitative)" : ""}</span><span class="ref-sub">What every system below is being compared against</span><span class="ref-text">${esc(
+    const eyebrow = t("transcripts.refEyebrow").replace("${set}", currentSet) + (currentSet === "E" ? t("transcripts.setTitleSecondary") : "");
+    refBlock.innerHTML = `<span class="eyebrow">${eyebrow}</span><span class="ref-sub">${t("transcripts.refSub")}</span><span class="ref-text">${esc(
       reconstructReference(alignments[0].ops)
     )}</span>`;
 
@@ -131,7 +143,7 @@
       .map((id, i) => {
         const sys = byId[id];
         const row = resultsPerSet.find((r) => r.system_id === id && r.set === currentSet);
-        const wer = row ? `${Number(row.wer_percent).toFixed(2)}% WER` : "";
+        const wer = row ? `${fmtNum(Number(row.wer_percent))}% WER` : "";
         return `
           <div class="transcript-col">
             <div class="col-head"><span>${sys.display_name}</span><span class="wer">${wer}</span></div>

@@ -76,15 +76,24 @@ header.site-head {
   background: var(--surface);
 }
 header.site-head .bar { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 16px; flex-wrap: wrap; }
-header.site-head .brand { font-weight: 700; font-size: 1.02rem; text-decoration: none; color: var(--text); }
+header.site-head .brand { font-weight: 700; font-size: 1.02rem; text-decoration: none; color: var(--text); flex: none; }
 header.site-head .brand span { color: var(--accent-strong); }
-nav.site-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+nav.site-nav { display: flex; gap: 4px; flex-wrap: wrap; flex: 1 1 auto; }
 nav.site-nav a, nav.site-nav .soon {
   font-size: 0.86rem; padding: 7px 12px; border-radius: 6px; text-decoration: none; color: var(--text-dim);
 }
 nav.site-nav a:hover { background: var(--surface-sunken); color: var(--text); }
 nav.site-nav a.active { color: var(--accent-strong); background: var(--accent-soft); font-weight: 600; }
 nav.site-nav .soon { color: var(--text-faint); cursor: default; }
+
+.lang-switch { display: flex; align-items: center; gap: 6px; flex: none; }
+.lang-switch button {
+  background: none; border: none; font: inherit; font-size: 0.82rem; font-weight: 600;
+  color: var(--text-faint); cursor: pointer; padding: 4px 5px; border-radius: 4px;
+}
+.lang-switch button:hover { color: var(--text); background: var(--surface-sunken); }
+.lang-switch button[aria-pressed="true"] { color: var(--accent-strong); }
+.lang-switch .lang-sep { color: var(--border-strong); font-size: 0.82rem; }
 nav.site-nav .soon::after { content: " · soon"; font-size: 0.72rem; }
 
 .scope-strip {

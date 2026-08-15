@@ -1,5 +1,23 @@
 (async function () {
   renderChrome("index.html");
+  document.title = t("home.title");
+  document.getElementById("page-h1").textContent = t("home.h1");
+  document.getElementById("hero-scope").innerHTML = t("home.heroScope");
+  document.getElementById("chart-heading").textContent = t("home.chartHeading");
+  document.getElementById("chart-caption").textContent = t("home.chartCaption");
+  document.getElementById("findings-heading").textContent = t("home.findingsHeading");
+  document.getElementById("finding-grid").innerHTML = [1, 2, 3]
+    .map(
+      (i) => `
+        <div class="finding-card">
+          <h3>${t(`home.finding${i}Title`)}</h3>
+          <p>${t(`home.finding${i}Body`)}</p>
+        </div>`
+    )
+    .join("");
+  document.getElementById("cta-compare").textContent = t("home.ctaCompare");
+  document.getElementById("cta-transcripts").textContent = t("home.ctaTranscripts");
+
   const { manifest, systems } = await loadWorkbenchData();
   applyManifestFooter(manifest);
 

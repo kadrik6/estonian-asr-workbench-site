@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="et">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.lang = localStorage.getItem("wb_lang") || "et";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Estonian ASR Workbench — results</title>
 <link rel="stylesheet" href="css/style.css">
@@ -10,48 +11,31 @@
 <header class="site-head" id="site-header"></header>
 
 <main class="wrap">
-  <h1>How well do Estonian speech-recognition systems actually work?</h1>
-  <p class="hero-scope">
-    The <strong>Estonian ASR Workbench</strong> scores nine existing speech-to-text
-    systems — local and cloud, Estonian-tuned and general-purpose — against the
-    same five Estonian recordings, using the same strict scoring rules for
-    every one of them. It does not build or train any of these models.
-  </p>
+  <h1 id="page-h1"></h1>
+  <p class="hero-scope" id="hero-scope"></p>
 
   <section id="chart-section">
-    <h2>Word error rate — how often each system got a word wrong</h2>
-    <p class="chart-caption">Shorter bar is better. Combined score across four of the five test recordings — see Compare for the full breakdown.</p>
+    <h2 id="chart-heading"></h2>
+    <p class="chart-caption" id="chart-caption"></p>
     <div id="barchart" class="barchart"></div>
   </section>
 
   <section id="findings-section">
-    <h2>What stands out</h2>
-    <div class="finding-grid">
-      <div class="finding-card">
-        <h3>Estonian tuning beats raw model size</h3>
-        <p>Generic Whisper-medium scores 31.34% WER. The same architecture, fine-tuned for Estonian, scores 9.64% — and stays far ahead even of a generic model twice its size.</p>
-      </div>
-      <div class="finding-card">
-        <h3>Newer isn't automatically more accurate</h3>
-        <p>The newest, purpose-built streaming models (Zipformer) score worse than an older, frozen Whisper-medium pipeline on this benchmark — architecture family matters as much as recency.</p>
-      </div>
-      <div class="finding-card">
-        <h3>Different technology, different mistakes</h3>
-        <p>One system uses a fundamentally different approach and it shows: most of its "errors" are missing spaces between correctly-heard words, not wrong words. See it directly on the Transcripts page.</p>
-      </div>
-    </div>
+    <h2 id="findings-heading"></h2>
+    <div class="finding-grid" id="finding-grid"></div>
   </section>
 
   <section id="cta-section">
     <div class="cta-row">
-      <a class="btn primary" href="compare.html">Compare systems in detail →</a>
-      <a class="btn secondary" href="transcripts.html">See where transcripts differ →</a>
+      <a class="btn primary" id="cta-compare" href="compare.html"></a>
+      <a class="btn secondary" id="cta-transcripts" href="transcripts.html"></a>
     </div>
   </section>
 </main>
 
 <footer class="site-foot" id="site-footer"></footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/data.js"></script>
 <script src="js/home.js"></script>
 </body>

@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="et">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.lang = localStorage.getItem("wb_lang") || "et";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Compare systems — Estonian ASR Workbench</title>
 <link rel="stylesheet" href="css/style.css">
@@ -11,23 +12,13 @@
 
 <main class="wrap">
   <div class="page-head">
-    <h1>Compare systems</h1>
-    <p>
-      Every benchmarked system, filterable by deployment, architecture family,
-      streaming/offline, and Estonian-tuned vs. general-purpose. Click a row
-      to see its per-set (A–E) breakdown. Sort by clicking a column header.
-    </p>
+    <h1 id="page-h1"></h1>
+    <p id="page-intro"></p>
   </div>
 
   <div class="filters" id="filters"></div>
 
-  <p class="rank-note">
-    Sorted by Word Error Rate by default — that's this benchmark's primary
-    accuracy metric, not an overall ranking. It says nothing about cost,
-    latency, privacy, or fit for your use case; deployment, hardware, and
-    reproducibility below are separate facts, not scored into this order.
-    Sort by any column.
-  </p>
+  <p class="rank-note" id="rank-note"></p>
 
   <div class="table-wrap">
     <table class="leaderboard" id="leaderboard">
@@ -39,6 +30,7 @@
 
 <footer class="site-foot" id="site-footer"></footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/data.js"></script>
 <script src="js/compare.js"></script>
 </body>

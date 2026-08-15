@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="et">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.lang = localStorage.getItem("wb_lang") || "et";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>System catalog — Estonian ASR Workbench</title>
 <link rel="stylesheet" href="css/style.css">
@@ -11,13 +12,8 @@
 
 <main class="wrap">
   <div class="page-head">
-    <h1>System catalog</h1>
-    <p>
-      What each system in this benchmark actually is — provider, architecture,
-      how it was run, and what's known versus unresolved. This is a reference
-      catalog, not a ranking; for scored comparison see Compare. Where a fact
-      isn't publicly documented, that's stated explicitly rather than guessed.
-    </p>
+    <h1 id="page-h1"></h1>
+    <p id="page-intro"></p>
   </div>
 
   <div id="catalog"></div>
@@ -25,6 +21,7 @@
 
 <footer class="site-foot" id="site-footer"></footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/data.js"></script>
 <script src="js/systems.js"></script>
 </body>
