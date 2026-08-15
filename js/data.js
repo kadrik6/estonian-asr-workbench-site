@@ -53,6 +53,33 @@ function categoryLabel(category) {
   return t(`common.category.${category}`);
 }
 
+// Short public-facing display names, used on the homepage chart and the
+// /compare table's dense System column ONLY -- never touches site-data/ or
+// the canonical system_id/display_name (still shown in full on /systems,
+// in title tooltips, and in /compare's expandable detail row). Proper
+// names, so identical in ET and EN. Falls back to the full display_name
+// for any system not listed here (e.g. a new one added later) rather than
+// silently rendering blank.
+const SHORT_LABELS = {
+  "tekstiks-ee": "tekstiks.ee",
+  "whisper-verbatim-2604": "TalTech Whisper Turbo",
+  "taltech-local-whisper-medium": "TalTech Whisper Medium",
+  "rust-zipformer-small": "Zipformer Small",
+  "rust-zipformer-large": "Zipformer Large",
+  "microsoft-word-transcribe": "Microsoft Word",
+  "whisper-large-v3": "Whisper Large-v3",
+  "openai-whisper-medium-generic": "Whisper Medium",
+  "omnilingual-asr-ctc-300m": "Meta Omnilingual CTC",
+};
+function shortLabel(s) {
+  return SHORT_LABELS[s.system_id] || s.display_name;
+}
+function categoryBarVar(cat) {
+  if (cat === "estonian-specialized-local") return "local";
+  if (cat === "commercial-cloud") return "cloud";
+  return "accent";
+}
+
 function familyLabel(bucket) {
   return bucket === "Whisper" || bucket === "Zipformer" || bucket === "wav2vec2 + CTC" ? bucket : t("common.family.unknownProprietary");
 }

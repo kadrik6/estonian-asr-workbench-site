@@ -111,6 +111,7 @@ const TRANSLATIONS = {
       miniRefWords: "Viitesõnu",
       secondary: "(teisejärguline)",
       compareTranscripts: "Vaata selle süsteemi transkriptsioone →",
+      fullName: "Täisnimi",
     },
     transcripts: {
       title: "Transkriptsioonide võrdlus — Eesti ASR võrdluskeskkond",
@@ -376,6 +377,7 @@ const TRANSLATIONS = {
       miniRefWords: "Ref words",
       secondary: "(secondary)",
       compareTranscripts: "Compare this system's transcripts →",
+      fullName: "Full name",
     },
     transcripts: {
       title: "Transcript comparison — Estonian ASR Workbench",

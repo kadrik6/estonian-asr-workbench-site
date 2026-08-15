@@ -92,30 +92,42 @@
     });
   }
 
+  // width: explicit column width in px (table-layout:fixed + <colgroup>,
+  // see below) -- based on measured text-metric worst cases per column,
+  // not guessed. nowrap: true forces single-line (System short names must
+  // never wrap; the trivial Yes/No/dash and numeric columns never need
+  // to). Columns without nowrap (Category, Deployment, Hardware,
+  // Streaming, Reproducible) may wrap to 2 lines under long ET translations
+  // -- an acceptable, ordinary table behavior, unlike system NAMES wrapping.
   const COLUMNS = [
-    { key: "display_name", label: t("compare.columns.system"), numeric: false },
-    { key: "category", label: t("compare.columns.category"), numeric: false, render: (s) => categoryLabel(s.category) },
-    { key: "deployment", label: t("compare.columns.deployment"), numeric: false, render: deploymentBadge },
-    { key: "hardware", label: t("compare.columns.hardware"), numeric: false, render: hardwareLabel },
-    { key: "streaming", label: t("compare.columns.streaming"), numeric: false, render: (s) => streamingLabel(s.streaming) },
-    { key: "estonian_tuned", label: t("compare.columns.tuned"), numeric: false, render: (s) => (s.estonian_tuned === true ? t("common.repro.yes") : s.estonian_tuned === false ? t("common.repro.no") : t("common.dash")) },
-    { key: "reproducible_by_user", label: t("compare.columns.reproducible"), numeric: false, render: (s) => reproLabel(s.reproducible_by_user) },
-    { key: "wer", label: t("compare.columns.wer"), numeric: true, render: (s) => fmtPct(s.headline?.wer_percent ?? null), sortVal: (s) => s.headline?.wer_percent ?? Infinity },
-    { key: "cer", label: t("compare.columns.cer"), numeric: true, render: (s) => fmtPct(s.headline?.cer_percent ?? null), sortVal: (s) => s.headline?.cer_percent ?? Infinity },
-    { key: "compound", label: t("compare.columns.compound"), numeric: true, render: (s) => fmtPct(s.headline?.compound_aware_wer_percent ?? null), sortVal: (s) => s.headline?.compound_aware_wer_percent ?? Infinity },
+    { key: "display_name", label: t("compare.columns.system"), width: 210, nowrap: true, cellClass: "sys-cell", render: (s) => esc(shortLabel(s)), title: (s) => s.display_name },
+    { key: "category", label: t("compare.columns.category"), width: 140, render: (s) => categoryLabel(s.category) },
+    { key: "deployment", label: t("compare.columns.deployment"), width: 110, render: deploymentBadge },
+    { key: "hardware", label: t("compare.columns.hardware"), width: 80, render: hardwareLabel },
+    { key: "streaming", label: t("compare.columns.streaming"), width: 110, render: (s) => streamingLabel(s.streaming) },
+    { key: "estonian_tuned", label: t("compare.columns.tuned"), width: 60, nowrap: true, render: (s) => (s.estonian_tuned === true ? t("common.repro.yes") : s.estonian_tuned === false ? t("common.repro.no") : t("common.dash")) },
+    { key: "reproducible_by_user", label: t("compare.columns.reproducible"), width: 100, render: (s) => reproLabel(s.reproducible_by_user) },
+    { key: "wer", label: t("compare.columns.wer"), width: 64, numeric: true, nowrap: true, render: (s) => fmtPct(s.headline?.wer_percent ?? null), sortVal: (s) => s.headline?.wer_percent ?? Infinity },
+    { key: "cer", label: t("compare.columns.cer"), width: 64, numeric: true, nowrap: true, render: (s) => fmtPct(s.headline?.cer_percent ?? null), sortVal: (s) => s.headline?.cer_percent ?? Infinity },
+    { key: "compound", label: t("compare.columns.compound"), width: 90, numeric: true, nowrap: true, render: (s) => fmtPct(s.headline?.compound_aware_wer_percent ?? null), sortVal: (s) => s.headline?.compound_aware_wer_percent ?? Infinity },
   ];
 
-  // deploymentBadge, hardwareLabel, reproLabel, streamingLabel, categoryLabel
-  // are shared from data.js -- see there, not redefined here, so /compare
-  // and /systems can't silently disagree on what a value means.
+  // deploymentBadge, hardwareLabel, reproLabel, streamingLabel, categoryLabel,
+  // shortLabel are shared from data.js -- see there, not redefined here, so
+  // /compare and /systems can't silently disagree on what a value means.
 
   let sortKey = "wer";
   let sortDir = 1; // 1 asc, -1 desc
   const openRows = new Set();
 
+  document.getElementById("leaderboard").insertAdjacentHTML(
+    "afterbegin",
+    `<colgroup>${COLUMNS.map((c) => `<col style="width:${c.width}px">`).join("")}</colgroup>`
+  );
+
   const theadRow = document.getElementById("thead-row");
   theadRow.innerHTML = COLUMNS.map(
-    (c) => `<th class="${c.numeric ? "num" : ""}" data-key="${c.key}">${c.label}</th>`
+    (c) => `<th class="${c.numeric ? "num " : ""}${c.nowrap ? "nowrap" : ""}" data-key="${c.key}">${c.label}</th>`
   ).join("");
   theadRow.querySelectorAll("th").forEach((th) => {
     th.addEventListener("click", () => {
@@ -183,7 +195,11 @@
 
     tbody.innerHTML = rows
       .map((s) => {
-        const cells = COLUMNS.map((c) => `<td class="${c.numeric ? "num" : ""}">${c.render ? c.render(s) : s[c.key] ?? t("common.dash")}</td>`).join("");
+        const cells = COLUMNS.map((c) => {
+          const cls = [c.numeric ? "num" : "", c.nowrap ? "nowrap" : "", c.cellClass || ""].filter(Boolean).join(" ");
+          const titleAttr = c.title ? ` title="${esc(c.title(s))}"` : "";
+          return `<td class="${cls}"${titleAttr}>${c.render ? c.render(s) : s[c.key] ?? t("common.dash")}</td>`;
+        }).join("");
         const detail = renderDetail(s);
         return `
           <tr class="sysrow" data-id="${s.system_id}">${cells}</tr>
@@ -204,13 +220,19 @@
   }
 
   function renderDetail(s) {
+    // The dense row shows only the short display name -- the full
+    // canonical name (and provider) is never hidden, just moved here.
+    const header = `<p class="detail-fullname"><span class="note-label">${t("compare.fullName")}</span> ${esc(s.display_name)}
+      <span class="detail-provider">${esc(s.provider || UNKNOWN_LONG())}</span></p>`;
+
     if (s.status === "planned") {
       // not_benchmarked_reason is raw Workbench metadata -- never translated.
-      return `<em>${t("compare.plannedDetail")}${esc(s.not_benchmarked_reason || "")}.</em>`;
+      return `${header}<em>${t("compare.plannedDetail")}${esc(s.not_benchmarked_reason || "")}.</em>`;
     }
     const rows = perSetRows(s.system_id);
-    if (rows.length === 0) return `<em>${t("compare.noPerSetData")}</em>`;
+    if (rows.length === 0) return `${header}<em>${t("compare.noPerSetData")}</em>`;
     return `
+      ${header}
       <table class="mini-table">
         <thead><tr><th>${t("compare.miniSet")}</th><th>${t("compare.miniWer")}</th><th>${t("compare.miniCer")}</th><th>${t("compare.miniCompound")}</th><th>${t("compare.miniRefWords")}</th></tr></thead>
         <tbody>
